@@ -1,6 +1,6 @@
 # FF11stats
 このソフトは，かつて一世を風靡した(?) FFXI Member Registration System のオフライン版のようなものが欲しくて開発しています。<br>
-動作には .NET 8 Desktop Runtime が必要です。
+動作には .NET 8 Desktop Runtime が必要です。<br>
 ファントムロールはアビリティですが，便宜上魔法としています。
 
 ## 開発環境

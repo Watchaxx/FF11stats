@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormCombatSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEmiCombatEschaArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEmiTutorialRhapsodies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEmiTutorialSandoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEmiTutorialZilart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormJoblvl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormJobPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicBlack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicBlue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicGeomancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicNinjutsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicSongs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicSummon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicTrust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMagicWhite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMerit54.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMerit76.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritCombatSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritDnc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritHpmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritMagicSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritOthers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritSch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritSmn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMeritWS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMissionAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMissionCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMissionMi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMoveSGHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMstlvl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormNewChr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormPhantomRoll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormQuestOt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormQuests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormQuestSd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormSynthSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

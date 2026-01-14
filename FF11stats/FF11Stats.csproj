@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AssemblyTitle>FF11stats</AssemblyTitle>
+    <Company>Copyright (C) SQUARE ENIX CO., LTD. All Rights Reserved.</Company>
+    <FileVersion>5.1.1.25</FileVersion>
+    <InformationalVersion>5.1.1</InformationalVersion>
+    <Product>FF11stats</Product>
+    <Copyright>(C) 2015-2026 わっちゃ</Copyright>
+    <Description>■更新履歴
+5.1.1 [fix] 高 DPI 環境に暫定対応
+5.1.0 [add] プロフィール/傭兵階級
+5.0.0 .NET 10 版
+4.2.0 [add] ステータス/プロフィールの項目
+  [add] ステータス/合成スキルにギルドショップの営業状況
+4.1.0 [add] エミネンスコンプリート数チェッカー
+  [add] 外部サイトへのリンク
+  [fix] メリポ/WS の上限値を25に変更
+  [fix] 一部エミネンスのコンプリート数が0と表示される
+  [fix] 一部 UI・内部処理の変更
+4.0.0 [add] 移動
+Preview 11 [add] 目標/釣り～その他
+Preview 10 [add] 目標/戦闘
+Preview 9 [add] 目標/チュートリアル
+  [add] 魔法の習得数，クエのコンプ数
+  [fix] 一部 UI・内部処理の変更
+Preview 8 [add] クエスト(拡張コンテンツ)
+  [fix] UI 調整
+Preview 7 [add] クエスト(オリジナルエリア)
+  [fix] 軽微な不具合修正，一部 UI 変更
+Preview 6 [add] ミッション
+Preview 5 [add] 魔法
+Preview 4 [add] ジョブポ
+Preview 3 [add] メリポ(ジョブ別)
+Preview 2 [add] メリポ(ステータス系)
+  [fix] 上書き保存の不具合
+Preview 1 初版
+4.0.0 .NET 8 版
+3.0.0 .NET 6 版
+2.0.0 UWP 版
+1.0.0 .NET Framework 4.5 版</Description>
+    <PackageIcon></PackageIcon>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+    <PackageProjectUrl>https://github.com/Watchaxx/FF11stats</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;IDE0028;IDE0300;IDE0305</NoWarn>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+    <ItemGroup>
+    <Content Include="Resources\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

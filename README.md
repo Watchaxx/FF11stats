@@ -7,7 +7,7 @@
 - Windows 11 23H2
 - Visual Studio Community 2026 Insiders
 - Core i9-9900K
-- 解像度：WQHD/100%
+- 解像度：WQHD/100%, 4K/150%
 
 ## 謝辞
 <dl>

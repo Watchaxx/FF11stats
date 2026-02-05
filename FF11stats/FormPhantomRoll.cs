@@ -28,7 +28,7 @@ namespace FF11stats
         {
             foreach( Control c in flowLayoutPanel1.Controls ) {
                 if( c is CheckBox b ) {
-                    cd.PhantomRoll[int.Parse( b.Name.Substring( 8 ) ) - 1] = Convert.ToInt16( b.Checked );
+                    cd.PhantomRoll[int.Parse( b.Name.Substring( 8 ) ) - 1] = Convert.ToSByte( b.Checked );
                 }
             }
             return;

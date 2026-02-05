@@ -13,7 +13,7 @@ namespace FF11stats
             const string rov = "ヴァナ・ディールの星唄";
             int idx = 0;
             int p = 0;
-            int[] n = { 3, 9, 12 };
+            int[] n = [3, 9, 12];
             CheckBox[] cb = new CheckBox[n.Sum()];
 
             AcceptButton = userControl11.ButtonAccept;
@@ -52,7 +52,7 @@ namespace FF11stats
 
                 foreach( Control c in userControl11.Flp.Controls ) {
                     if( c is CheckBox b ) {
-                        short ch = Convert.ToInt16( b.Checked );
+                        sbyte ch = Convert.ToSByte( b.Checked );
 
                         if( ch != 0 ) {
                             q++;

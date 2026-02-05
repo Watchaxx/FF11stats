@@ -9,11 +9,16 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyTitle>FF11stats</AssemblyTitle>
     <Company>Copyright (C) SQUARE ENIX CO., LTD. All Rights Reserved.</Company>
-    <FileVersion>5.1.1.25</FileVersion>
-    <InformationalVersion>5.1.1</InformationalVersion>
+    <FileVersion>5.2.0.26</FileVersion>
+    <InformationalVersion>5.2.0</InformationalVersion>
     <Product>FF11stats</Product>
     <Copyright>(C) 2015-2026 わっちゃ</Copyright>
     <Description>■更新履歴
+5.2.0 [add] ツール＞ヴァナ時計
+  [add] 外部ウェブサイト＞ビシージ週間履歴
+  [fix] メリットポイントとジョブポイントをステータスの中に移動
+  [fix] 移動＞マウントをだいじなものの中に移動
+  [fix] 内部処理の変更
 5.1.1 [fix] 高 DPI 環境に暫定対応
 5.1.0 [add] プロフィール/傭兵階級
 5.0.0 .NET 10 版

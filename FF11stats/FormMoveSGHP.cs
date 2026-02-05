@@ -5,8 +5,9 @@ namespace FF11stats
     public partial class FormMoveSGHP : Form
     {
 #pragma warning disable CS8618
+#pragma warning disable IDE0028
 #pragma warning disable IDE0306
-        static short[] dat;
+        static sbyte[] dat;
         static string MenuName;
 
         public FormMoveSGHP( ToolStripMenuItem menu )
@@ -28,29 +29,29 @@ namespace FF11stats
             userControl11.Flp.SuspendLayout();
             switch( MenuName ) {
             case "toolStripMenuItem167":
-                dat = new short[cd.MovOutpost.Length];
+                dat = new sbyte[cd.MovOutpost.Length];
                 Array.ConstrainedCopy( cd.MovOutpost, 0, dat, 0, cd.MovOutpost.Length );
                 dispStr = new( ds.MovOutpost );
                 break;
             case "toolStripMenuItem168":
-                dat = new short[cd.MovRunicPortal.Length];
+                dat = new sbyte[cd.MovRunicPortal.Length];
                 Array.ConstrainedCopy( cd.MovRunicPortal, 0, dat, 0, cd.MovRunicPortal.Length );
                 dispStr = new( ds.MovRunicPortal );
                 break;
             case "toolStripMenuItem169":
-                dat = new short[cd.MovSurvivalGuide.Length];
+                dat = new sbyte[cd.MovSurvivalGuide.Length];
                 Array.ConstrainedCopy( cd.MovSurvivalGuide, 0, dat, 0, cd.MovSurvivalGuide.Length );
                 dispStr = new( ds.MovSurvivalGuide );
                 Text = $"移動/{menu.Text![1..]}";
                 break;
             case "toolStripMenuItem170":
-                dat = new short[cd.MovHomePoint.Length];
+                dat = new sbyte[cd.MovHomePoint.Length];
                 Array.ConstrainedCopy( cd.MovHomePoint, 0, dat, 0, cd.MovHomePoint.Length );
                 dispStr = new( ds.MovHomePoint );
                 Text = $"移動/{menu.Text![1..]}";
                 break;
             case "toolStripMenuItem171":
-                dat = new short[cd.MovMount.Length];
+                dat = new sbyte[cd.MovMount.Length];
                 Array.ConstrainedCopy( cd.MovMount, 0, dat, 0, cd.MovMount.Length );
                 dispStr = new( ds.MovMount );
                 sumi = "入手済：";
@@ -98,7 +99,7 @@ namespace FF11stats
 
                 foreach( Control c in userControl11.Flp.Controls ) {
                     if( c is CheckBox b ) {
-                        short ch = Convert.ToInt16( b.Checked );
+                        sbyte ch = Convert.ToSByte( b.Checked );
 
                         if( ch != 0 ) {
                             p++;
@@ -121,7 +122,7 @@ namespace FF11stats
                     break;
                 case "toolStripMenuItem171":
                     if( cd.MovMount.Length != dat.Length ) {
-                        cd.MovMount = new short[dat.Length];
+                        cd.MovMount = new sbyte[dat.Length];
                     }
                     Array.ConstrainedCopy( dat, 0, cd.MovMount, 0, dat.Length );
                     break;

@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using FF11Stats;
+using System.Text.Json;
 using static FF11stats.Program;
 
 namespace FF11stats
@@ -10,12 +11,20 @@ namespace FF11stats
             InitializeComponent();
 
             Icon = Resource1.logo1;
-            if( string.IsNullOrWhiteSpace( edit ) == true ) {
+            if( string.IsNullOrWhiteSpace( edit ) is true ) {
                 SetTitle();
+                ChangeStatus( "Ready" );
             } else {
                 SetTitle( edit.Split( '\\' )[^1] );
+                ChangeStatus( $"Load from {edit}" );
             }
             label1.Text = cd.Name;
+        }
+
+        private void ChangeStatus( string s )
+        {
+            toolStripStatusLabel1.Text = $"[{DateTime.Now.ToLongTimeString()}] {s}";
+            return;
         }
 
         public static void LoadJson( string file )
@@ -47,9 +56,6 @@ namespace FF11stats
 
             switch( b.Name ) {
             case "button1":
-                contextMenuStrip1.Show( b, new Point( 0, b.Height ) );
-                break;
-            case "button2":
                 toolStripMenuItem23.Checked = 75 <= cd.JoblvlWar;
                 toolStripMenuItem24.Checked = 75 <= cd.JoblvlMnk;
                 toolStripMenuItem25.Checked = 75 <= cd.JoblvlWhm;
@@ -72,9 +78,6 @@ namespace FF11stats
                 toolStripMenuItem42.Checked = 75 <= cd.JoblvlSch;
                 toolStripMenuItem43.Checked = 75 <= cd.JoblvlGeo;
                 toolStripMenuItem44.Checked = 75 <= cd.JoblvlRun;
-                contextMenuStrip2.Show( b, new Point( 0, b.Height ) );
-                break;
-            case "button3":
                 toolStripMenuItem45.Checked = 99 <= cd.JoblvlWar;
                 toolStripMenuItem46.Checked = 99 <= cd.JoblvlMnk;
                 toolStripMenuItem47.Checked = 99 <= cd.JoblvlWhm;
@@ -97,7 +100,13 @@ namespace FF11stats
                 toolStripMenuItem64.Checked = 99 <= cd.JoblvlSch;
                 toolStripMenuItem65.Checked = 99 <= cd.JoblvlGeo;
                 toolStripMenuItem66.Checked = 99 <= cd.JoblvlRun;
-                contextMenuStrip3.Show( b, new Point( 0, b.Height ) );
+                contextMenuStrip1.Show( b, new Point( 0, b.Height ) );
+                break;
+            case "button2":
+                MessageBox.Show( "工事中(´・ω・｀)" );
+                break;
+            case "button3":
+                contextMenuStrip9.Show( b, new Point( 0, b.Height ) );
                 break;
             case "button4":
                 contextMenuStrip4.Show( b, new Point( 0, b.Height ) );
@@ -119,49 +128,6 @@ namespace FF11stats
             return;
         }
 
-        private void Timer1_Tick( object sender, EventArgs e )
-        {
-            const uint vanaSec = 3600 * 24 / 25;
-            DateTime now = DateTime.Now.ToLocalTime();
-            ulong earthSec = (ulong)( now - new DateTimeOffset( 2002, 1, 1, 0, 0, 0, TimeSpan.FromHours( 9d ) ) ).TotalSeconds;
-            ulong vanaDays = earthSec / vanaSec;
-            ulong year = vanaDays / 360 + 886;
-            ulong month = vanaDays / 30 % 12 + 1;
-            ulong day = vanaDays % 30 + 1;
-            string week = ( vanaDays % 8 ) switch {
-                0 => "火",
-                1 => "土",
-                2 => "水",
-                3 => "風",
-                4 => "氷",
-                5 => "雷",
-                6 => "光",
-                7 => "闇",
-                _ => throw new InvalidOperationException( "曜日" )
-            };
-            ulong hour = earthSec % vanaSec * 25 / 3600 % 24;
-            ulong min = earthSec % vanaSec * 25 / 60 % 60;
-            string moon = ( vanaDays / 7 % 12 ) switch {
-                0 => "新月",
-                1 => "三日月",
-                2 => "七日月",
-                3 => "上弦の月",
-                4 => "十日月",
-                5 => "十三夜",
-                6 => "満月",
-                7 => "十六夜",
-                8 => "居待月",
-                9 => "下弦の月",
-                10 => "二十日余",
-                11 => "二十六夜",
-                _ => throw new InvalidOperationException( "月齢" )
-            };
-
-            label2.Text = $"Vana'diel [{year}/{month}/{day}({week}) {hour}:{min:00} <{moon}>]";
-            label3.Text = $"    Earth [{now:yyyy/M/d}({now:ddd}) {now.ToLongTimeString()}]";
-            return;
-        }
-
         private void ToolStripMenuItem2_Click( object sender, EventArgs e )
         {
             using FormNewChr f = new();
@@ -169,6 +135,7 @@ namespace FF11stats
             if( f.ShowDialog() == DialogResult.OK ) {
                 SetTitle();
                 label1.Text = cd.Name;
+                ChangeStatus( "Ready" );
             }
             return;
         }
@@ -183,6 +150,7 @@ namespace FF11stats
                 edit = ofd.FileName;
                 SetTitle( ofd.SafeFileName );
                 label1.Text = cd.Name;
+                ChangeStatus( $"Load from {edit}" );
             }
             return;
         }
@@ -191,6 +159,7 @@ namespace FF11stats
         {
             if( string.IsNullOrWhiteSpace( edit ) is false ) {
                 File.WriteAllBytes( edit, JsonSerializer.SerializeToUtf8Bytes( cd ) );
+                ChangeStatus( $"Save to {edit}" );
             } else {
                 ToolStripMenuItem5_Click( sender, e );
             }
@@ -207,6 +176,7 @@ namespace FF11stats
                 File.WriteAllBytes( sfd.FileName, JsonSerializer.SerializeToUtf8Bytes( cd ) );
                 edit = sfd.FileName;
                 SetTitle( sfd.FileName.Split( '\\' )[^1] );
+                ChangeStatus( $"Save to {edit}" );
             }
             return;
         }
@@ -214,6 +184,13 @@ namespace FF11stats
         private void ToolStripMenuItem6_Click( object sender, EventArgs e )
         {
             Application.Exit();
+            return;
+        }
+
+        private void ToolStripMenuItem8_Click( object sender, EventArgs e )
+        {
+            using FormVanaClock vc = new();
+            vc.ShowDialog();
             return;
         }
 
@@ -554,6 +531,14 @@ namespace FF11stats
             case "toolStripMenuItem164":
                 ShowForm( new FormQuests( i ) );
                 break;
+            case "toolStripMenuItem179":
+            case "toolStripMenuItem180":
+            case "toolStripMenuItem181":
+            case "toolStripMenuItem182":
+            case "toolStripMenuItem183":
+            case "toolStripMenuItem184":
+                MessageBox.Show( "工事中(´・ω・｀)" );
+                break;
             //移動
             case "toolStripMenuItem167":
             case "toolStripMenuItem168":
@@ -672,6 +657,7 @@ namespace FF11stats
                     "toolStripMenuItem173" => "https://github.com/Watchaxx/FF11stats",
                     "toolStripMenuItem174" => "http://www.playonline.com/ff11/index.shtml",
                     "toolStripMenuItem175" => "https://wiki.ffo.jp/",
+                    "toolStripMenuItem176" => "https://besiege.info/cgi-bin/w_his.cgi?svr=16",
                     _ => throw new ArgumentException( "外部 URL" ),
                 };
             }

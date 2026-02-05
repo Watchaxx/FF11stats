@@ -5,7 +5,7 @@ namespace FF11stats
     public partial class FormEmiTutorialZilart : Form
     {
 #pragma warning disable CS8618
-        static short[] dat;
+        static sbyte[] dat;
         static int com = 0;
 
         internal FormEmiTutorialZilart( Mission mission )
@@ -94,7 +94,7 @@ namespace FF11stats
 
                 foreach( Control c in userControl11.Flp.Controls ) {
                     if( c is CheckBox b ) {
-                        short ch = Convert.ToInt16( b.Checked );
+                        sbyte ch = Convert.ToSByte( b.Checked );
 
                         if( ch != 0 ) {
                             q++;

@@ -14,11 +14,12 @@ namespace FF11stats
             int i = 0;
             int p = 0;
             CheckBox[] cb = new CheckBox[28];
-            Dictionary<string, int> d = new( 3 );
+            Dictionary<string, int> d = new( 3 ) {
+                { "エスカ-ジ・タ", 7 },
+                { "エスカ-ル・オン", 10 },
+                { "醴泉島", 11 }
+            };
 
-            d.Add( "エスカ-ジ・タ", 7 );
-            d.Add( "エスカ-ル・オン", 10 );
-            d.Add( "醴泉島", 11 );
             AcceptButton = userControl11.ButtonAccept;
             CancelButton = userControl11.ButtonCancel;
             userControl11.ButtonClick += Button_Click;
@@ -55,7 +56,7 @@ namespace FF11stats
 
                 foreach( Control c in userControl11.Flp.Controls ) {
                     if( c is CheckBox b ) {
-                        short ch = Convert.ToInt16( b.Checked );
+                        sbyte ch = Convert.ToSByte( b.Checked );
 
                         if( ch != 0 ) {
                             p++;

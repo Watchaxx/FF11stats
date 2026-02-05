@@ -5,7 +5,7 @@ namespace FF11stats
     public partial class FormEmiTutorialSandoria : Form
     {
 #pragma warning disable CS8618
-        static short[] dat;
+        static sbyte[] dat;
         static int com = 0;
 
         internal FormEmiTutorialSandoria( Mission mission )
@@ -14,7 +14,7 @@ namespace FF11stats
 
             int i = 0;
             int p = 0;
-            int[] n = { 3, 3, 3, 1, 2, 2, 2, 2, 2 };
+            int[] n = [3, 3, 3, 1, 2, 2, 2, 2, 2];
             string s = string.Empty;
             CheckBox[] cb = new CheckBox[20];
 
@@ -69,7 +69,7 @@ namespace FF11stats
 
                 foreach( Control c in userControl11.Flp.Controls ) {
                     if( c is CheckBox b ) {
-                        short ch = Convert.ToInt16( b.Checked );
+                        sbyte ch = Convert.ToSByte( b.Checked );
 
                         if( ch != 0 ) {
                             q++;

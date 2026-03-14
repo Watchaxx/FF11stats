@@ -174,6 +174,9 @@
             label133 = new Label();
             label134 = new Label();
             timer1 = new System.Windows.Forms.Timer( components );
+            tableLayoutPanel11 = new TableLayoutPanel();
+            label135 = new Label();
+            label136 = new Label();
             flowLayoutPanel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -185,6 +188,7 @@
             tableLayoutPanel8.SuspendLayout();
             tableLayoutPanel9.SuspendLayout();
             tableLayoutPanel10.SuspendLayout();
+            tableLayoutPanel11.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -196,6 +200,7 @@
             flowLayoutPanel1.Controls.Add( tableLayoutPanel5 );
             flowLayoutPanel1.Controls.Add( tableLayoutPanel6 );
             flowLayoutPanel1.Controls.Add( tableLayoutPanel7 );
+            flowLayoutPanel1.Controls.Add( tableLayoutPanel11 );
             flowLayoutPanel1.Controls.Add( tableLayoutPanel8 );
             flowLayoutPanel1.Controls.Add( tableLayoutPanel9 );
             flowLayoutPanel1.Controls.Add( tableLayoutPanel10 );
@@ -1485,7 +1490,7 @@
             tableLayoutPanel8.Controls.Add( label121, 0, 8 );
             tableLayoutPanel8.Controls.Add( label122, 0, 9 );
             tableLayoutPanel8.Controls.Add( label123, 0, 10 );
-            tableLayoutPanel8.Location = new Point( 354, 231 );
+            tableLayoutPanel8.Location = new Point( 354, 276 );
             tableLayoutPanel8.Name = "tableLayoutPanel8";
             tableLayoutPanel8.RowCount = 11;
             tableLayoutPanel8.RowStyles.Add( new RowStyle() );
@@ -1611,7 +1616,7 @@
             tableLayoutPanel9.Controls.Add( label127, 0, 3 );
             tableLayoutPanel9.Controls.Add( label128, 0, 4 );
             tableLayoutPanel9.Controls.Add( label129, 0, 5 );
-            tableLayoutPanel9.Location = new Point( 354, 405 );
+            tableLayoutPanel9.Location = new Point( 354, 450 );
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 6;
             tableLayoutPanel9.RowStyles.Add( new RowStyle() );
@@ -1689,7 +1694,7 @@
             tableLayoutPanel10.Controls.Add( label132, 1, 1 );
             tableLayoutPanel10.Controls.Add( label133, 2, 1 );
             tableLayoutPanel10.Controls.Add( label134, 3, 1 );
-            tableLayoutPanel10.Location = new Point( 354, 504 );
+            tableLayoutPanel10.Location = new Point( 564, 3 );
             tableLayoutPanel10.Name = "tableLayoutPanel10";
             tableLayoutPanel10.RowCount = 2;
             tableLayoutPanel10.RowStyles.Add( new RowStyle() );
@@ -1749,6 +1754,39 @@
             timer1.Interval = 500;
             timer1.Tick +=  Timer1_Tick ;
             // 
+            // tableLayoutPanel11
+            // 
+            tableLayoutPanel11.ColumnCount = 1;
+            tableLayoutPanel11.ColumnStyles.Add( new ColumnStyle() );
+            tableLayoutPanel11.ColumnStyles.Add( new ColumnStyle( SizeType.Absolute, 20F ) );
+            tableLayoutPanel11.Controls.Add( label135, 0, 0 );
+            tableLayoutPanel11.Controls.Add( label136, 0, 1 );
+            tableLayoutPanel11.Location = new Point( 354, 231 );
+            tableLayoutPanel11.Name = "tableLayoutPanel11";
+            tableLayoutPanel11.RowCount = 2;
+            tableLayoutPanel11.RowStyles.Add( new RowStyle( SizeType.Percent, 50F ) );
+            tableLayoutPanel11.RowStyles.Add( new RowStyle( SizeType.Percent, 50F ) );
+            tableLayoutPanel11.Size = new Size( 135, 39 );
+            tableLayoutPanel11.TabIndex = 10;
+            // 
+            // label135
+            // 
+            label135.AutoSize = true;
+            label135.Location = new Point( 3, 0 );
+            label135.Name = "label135";
+            label135.Size = new Size( 103, 15 );
+            label135.TabIndex = 0;
+            label135.Text = "目標≪期間限定≫";
+            // 
+            // label136
+            // 
+            label136.AutoSize = true;
+            label136.Location = new Point( 3, 19 );
+            label136.Name = "label136";
+            label136.Size = new Size( 126, 15 );
+            label136.TabIndex = 1;
+            label136.Text = "Treasure Casketを開ける";
+            // 
             // FormVanaClock
             // 
             AutoScaleDimensions = new SizeF( 7F, 15F );
@@ -1780,6 +1818,8 @@
             tableLayoutPanel9.PerformLayout();
             tableLayoutPanel10.ResumeLayout( false );
             tableLayoutPanel10.PerformLayout();
+            tableLayoutPanel11.ResumeLayout( false );
+            tableLayoutPanel11.PerformLayout();
             ResumeLayout( false );
         }
 
@@ -1931,5 +1971,8 @@
         private Label label132;
         private Label label133;
         private Label label134;
+        private TableLayoutPanel tableLayoutPanel11;
+        private Label label135;
+        private Label label136;
     }
 }

@@ -8,12 +8,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyTitle>FF11stats</AssemblyTitle>
-    <Company>Copyright (C) SQUARE ENIX CO., LTD. All Rights Reserved.</Company>
-    <FileVersion>5.2.0.26</FileVersion>
-    <InformationalVersion>5.2.0</InformationalVersion>
+    <Company>(C) SQUARE ENIX</Company>
+    <FileVersion>5.3.0.27</FileVersion>
+    <InformationalVersion>5.3.0</InformationalVersion>
     <Product>FF11stats</Product>
     <Copyright>(C) 2015-2026 わっちゃ</Copyright>
     <Description>■更新履歴
+5.3.0 [add] ステータス＞フェイスポイント
+  [fix] ヴァナ時計のユニティリーダの目標が正しくない
 5.2.0 [add] ツール＞ヴァナ時計
   [add] 外部ウェブサイト＞ビシージ週間履歴
   [fix] メリットポイントとジョブポイントをステータスの中に移動

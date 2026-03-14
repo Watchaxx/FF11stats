@@ -200,6 +200,36 @@ namespace FF11Stats
             const string ws = "ウェポンスキル使用回数(UC)";
             int uday = (int)( now - new DateTime( 2026, 1, 19 ) ).TotalDays;
 
+            switch( now.DayOfWeek ) {
+            case DayOfWeek.Sunday:
+                label136.Text = now.Hour < 4 ? "魔法ダメージで倒す" : now.Hour < 8 ? $"プラントイド{obj3}" : now.Hour < 12 ? $"アモルフ{obj3}"
+                    : now.Hour < 16 ? $"ヴァーミン{obj3}" : now.Hour < 20 ? $"アルカナ{obj3}" : "経験値を得る";
+                break;
+            case DayOfWeek.Monday:
+                label136.Text = now.Hour < 4 ? $"バード{obj3}" : now.Hour < 8 ? $"リザード{obj3}" : now.Hour < 12 ? $"アンデッド{obj3}"
+                    : now.Hour < 16 ? "戦利品(印章)" : now.Hour < 20 ? "Treasure Casketを開ける" : $"アクアン{obj3}";
+                break;
+            case DayOfWeek.Tuesday:
+                label136.Text = now.Hour < 4 ? $"アモルフ{obj3}" : now.Hour < 8 ? $"ヴァーミン{obj3}" : now.Hour < 12 ? $"アルカナ{obj3}"
+                    : now.Hour < 16 ? "経験値を得る" : now.Hour < 20 ? "物理ダメージで倒す" : $"ビースト{obj3}";
+                break;
+            case DayOfWeek.Wednesday:
+                label136.Text = now.Hour < 4 ? $"アンデッド{obj3}" : now.Hour < 8 ? "戦利品(印章)" : now.Hour < 12 ? "Treasure Casketを開ける"
+                    : now.Hour < 16 ? $"アクアン{obj3}" : now.Hour < 20 ? "魔法ダメージで倒す" : $"プラントイド{obj3}";
+                break;
+            case DayOfWeek.Thursday:
+                label136.Text = now.Hour < 4 ? $"アルカナ{obj3}" : now.Hour < 8 ? "経験値を得る" : now.Hour < 12 ? "物理ダメージで倒す"
+                    : now.Hour < 16 ? $"ビースト{obj3}" : now.Hour < 20 ? $"バード{obj3}" : $"リザード{obj3}";
+                break;
+            case DayOfWeek.Friday:
+                label136.Text = now.Hour < 4 ? "Treasure Casketを開ける" : now.Hour < 8 ? $"アクアン{obj3}" : now.Hour < 12 ? "魔法ダメージで倒す"
+                    : now.Hour < 16 ? $"プラントイド{obj3}" : now.Hour < 20 ? $"アモルフ{obj3}" : $"ヴァーミン{obj3}";
+                break;
+            case DayOfWeek.Saturday:
+                label136.Text = now.Hour < 4 ? "物理ダメージで倒す" : now.Hour < 8 ? $"ビースト{obj3}" : now.Hour < 12 ? $"バード{obj3}"
+                    : now.Hour < 16 ? $"リザード{obj3}" : now.Hour < 20 ? $"アンデッド{obj3}" : "戦利品(印章)";
+                break;
+            }
             switch( uday % 6 ) {
             case 0:
                 label113.Text = $"{uni}共通A";
@@ -347,7 +377,7 @@ namespace FF11Stats
                     }
                     break;
                 case 3: // インビンシブルシールド
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"片手斧{ws}";
                         label126.Text = "戦闘：南グスタベルグ(UC)";
@@ -379,7 +409,7 @@ namespace FF11Stats
                     }
                     break;
                 case 4: // アプルル
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"片手棍{ws}";
                         label126.Text = "戦闘：西サルタバルタ(UC)";
@@ -411,7 +441,7 @@ namespace FF11Stats
                     }
                     break;
                 case 5: // マート
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"格闘{ws}";
                         label126.Text = "戦闘：ヨルシア森林(UC)";
@@ -443,7 +473,7 @@ namespace FF11Stats
                     }
                     break;
                 case 6: // アルド
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"短剣{ws}";
                         label126.Text = "戦闘：聖地ジ・タ(UC)";
@@ -475,7 +505,7 @@ namespace FF11Stats
                     }
                     break;
                 case 7: // ジャコ・ワーコンダロ
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"短剣{ws}";
                         label126.Text = "戦闘：ユタンガ大森林(UC)";
@@ -507,7 +537,7 @@ namespace FF11Stats
                     }
                     break;
                 case 8: // ナジャ・サラヒム
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"片手棍{ws}";
                         label126.Text = "戦闘：バフラウ段丘(UC)";
@@ -539,7 +569,7 @@ namespace FF11Stats
                     }
                     break;
                 case 9: // フラヴィリア
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"両手槍{ws}";
                         label126.Text = "戦闘：シルダス洞窟(UC)";
@@ -571,7 +601,7 @@ namespace FF11Stats
                     }
                     break;
                 case 10:    // ヨランオラン
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"片手棍{ws}";
                         label126.Text = "戦闘：ギデアス(UC)";
@@ -603,7 +633,7 @@ namespace FF11Stats
                     }
                     break;
                 case 11:    // シルヴィ
-                    switch( uday / 7 % 5 ) {
+                    switch( uday / 7 % 4 ) {
                     case 0:
                         label125.Text = $"片手棍{ws}";
                         label126.Text = "戦闘：シィの門(UC)";

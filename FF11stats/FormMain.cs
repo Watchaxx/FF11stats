@@ -104,6 +104,7 @@ namespace FF11stats
                 break;
             case "button2":
                 MessageBox.Show( "工事中(´・ω・｀)" );
+                //contextMenuStrip10.Show( b, new Point( 0, b.Height ) );
                 break;
             case "button3":
                 contextMenuStrip9.Show( b, new Point( 0, b.Height ) );
@@ -386,6 +387,10 @@ namespace FF11stats
             case "toolStripMenuItem66":
                 ShowForm( new FormJobPoints( Jobs.Run ) );
                 break;
+            case "toolStripMenuItem191":
+            case "toolStripMenuItem192":
+                ShowForm( new FormFaithPoints( i ) );
+                break;
             //魔法
             case "toolStripMenuItem67":
                 ShowForm( new FormMagicWhite() );
@@ -657,7 +662,7 @@ namespace FF11stats
                     "toolStripMenuItem173" => "https://github.com/Watchaxx/FF11stats",
                     "toolStripMenuItem174" => "http://www.playonline.com/ff11/index.shtml",
                     "toolStripMenuItem175" => "https://wiki.ffo.jp/",
-                    "toolStripMenuItem176" => "https://besiege.info/cgi-bin/w_his.cgi?svr=16",
+                    "toolStripMenuItem176" => "https://besiege.info/stat_link.htm",
                     _ => throw new ArgumentException( "外部 URL" ),
                 };
             }

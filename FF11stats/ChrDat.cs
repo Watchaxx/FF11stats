@@ -192,6 +192,10 @@
         public ulong JobpoGeo { get; set; } = 0;
         public ulong JobpoRun { get; set; } = 0;
         #endregion
+        #region フェイスポイント
+        public sbyte[] FaithPtHpMp { get; set; } = new sbyte[2];
+        public sbyte[] FaithPtStatus { get; set; } = new sbyte[7];
+        #endregion
         #region 魔法
         public sbyte[] Magic { get; set; } = new sbyte[1023];
         public sbyte[] PhantomRoll { get; set; } = new sbyte[31];

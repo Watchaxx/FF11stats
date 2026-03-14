@@ -401,6 +401,10 @@ namespace FF11stats
         const string lv75 = "レベル75";
         const string lv99 = "レベル99";
 
+        #region フェイスポイント
+        internal string[] FaithPtHpMp { get; } = ["HP上限", "MP上限"];
+        internal string[] FaithPtStatus { get; } = ["STR", "DEX", "VIT", "AGI", "INT", "MND", "CHR"];
+        #endregion
         #region クエスト
         internal Dic QuestBs { get; } = new( 100 ) { { 0, "セイレーンの涙" }, { 1, "ガルカと少女" }, { 2, "ようこそバストゥークへ" }, { 3, "待ち人来たらず" }, { 4, "クゥダフの呪い" },
             { 05, "甲羅を脱いで" }, { 6, "ミスリルに賭けた男たち" }, { 7, "11人目の真実" }, { 8, "買い取りなら天晶堂" }, { 9, "犬は忘れない" },

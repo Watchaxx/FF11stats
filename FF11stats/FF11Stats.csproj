@@ -9,11 +9,16 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyTitle>FF11stats</AssemblyTitle>
     <Company>(C) SQUARE ENIX</Company>
-    <FileVersion>5.3.0.27</FileVersion>
-    <InformationalVersion>5.3.0</InformationalVersion>
+    <FileVersion>5.4.0.28</FileVersion>
+    <InformationalVersion>5.4.0</InformationalVersion>
     <Product>FF11stats</Product>
     <Copyright>(C) 2015-2026 わっちゃ</Copyright>
     <Description>■更新履歴
+5.4.0 [add] フェイスポイント＞スキル
+  [add] エミネンス新規目標
+  [fix] 魔法の習得済みを隠すのショートカットキー
+  [fix] ヴァナ時計のデュナミス[D]が地球時刻ではなくヴァナ時刻を参照していた
+  [fix] 公式サイトの URL
 5.3.0 [add] ステータス＞フェイスポイント
   [fix] ヴァナ時計のユニティリーダの目標が正しくない
 5.2.0 [add] ツール＞ヴァナ時計

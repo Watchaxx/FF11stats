@@ -29,6 +29,11 @@ namespace FF11Stats
                 lst = new( Program.cd.FaithPtStatus );
                 Text += "ステータス";
                 break;
+            case "toolStripMenuItem193":
+                str = ds.FaithPtSkill;
+                lst = new( Program.cd.FaithPtSkill );
+                Text += "スキル";
+                break;
             }
 #pragma warning restore
             tableLayoutPanel1.RowCount = str.Length;
@@ -93,6 +98,15 @@ namespace FF11Stats
                         int i = int.Parse( n.Name[1..] );
 
                         Program.cd.FaithPtStatus[i] = (sbyte)n.Value;
+                    }
+                }
+                break;
+            case "toolStripMenuItem193":
+                foreach( Control c in tableLayoutPanel1.Controls ) {
+                    if( c is NumericUpDown n ) {
+                        int i = int.Parse( n.Name[1..] );
+
+                        Program.cd.FaithPtSkill[i] = (sbyte)n.Value;
                     }
                 }
                 break;

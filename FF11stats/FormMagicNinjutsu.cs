@@ -99,6 +99,7 @@ namespace FF11stats
 
         private void ToolStripMenuItem8_Click( object sender, EventArgs e )
         {
+            tableLayoutPanel1.SuspendLayout();
             foreach( Control c in tableLayoutPanel1.Controls ) {
                 if( c is CheckBox b ) {
                     if( toolStripMenuItem8.Checked is true ) {
@@ -110,6 +111,7 @@ namespace FF11stats
                     }
                 }
             }
+            tableLayoutPanel1.ResumeLayout();
             return;
         }
     }

@@ -27,6 +27,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( FormMagicSummon ) );
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             toolStripMenuItem4 = new ToolStripMenuItem();
@@ -99,7 +100,7 @@
             // 
             // toolStripMenuItem5
             // 
-            toolStripMenuItem5.Image = Resource1.Search;
+            toolStripMenuItem5.Image = (Image)resources.GetObject( "toolStripMenuItem5.Image" );
             toolStripMenuItem5.Name = "toolStripMenuItem5";
             toolStripMenuItem5.ShortcutKeys =  Keys.Control  |  Keys.F ;
             toolStripMenuItem5.Size = new Size( 184, 22 );
@@ -113,7 +114,7 @@
             // 
             // toolStripMenuItem6
             // 
-            toolStripMenuItem6.Image = Resource1.CheckBoxChecked;
+            toolStripMenuItem6.Image = (Image)resources.GetObject( "toolStripMenuItem6.Image" );
             toolStripMenuItem6.Name = "toolStripMenuItem6";
             toolStripMenuItem6.Size = new Size( 184, 22 );
             toolStripMenuItem6.Text = "全て習得済みにする(&L)";
@@ -121,7 +122,7 @@
             // 
             // toolStripMenuItem7
             // 
-            toolStripMenuItem7.Image = Resource1.CheckBoxUnchecked;
+            toolStripMenuItem7.Image = (Image)resources.GetObject( "toolStripMenuItem7.Image" );
             toolStripMenuItem7.Name = "toolStripMenuItem7";
             toolStripMenuItem7.Size = new Size( 184, 22 );
             toolStripMenuItem7.Text = "全て未習得にする(&U)";
@@ -138,7 +139,8 @@
             // 
             toolStripMenuItem8.CheckOnClick = true;
             toolStripMenuItem8.Name = "toolStripMenuItem8";
-            toolStripMenuItem8.Size = new Size( 169, 22 );
+            toolStripMenuItem8.ShortcutKeys =  Keys.Control  |  Keys.H ;
+            toolStripMenuItem8.Size = new Size( 211, 22 );
             toolStripMenuItem8.Text = "習得済みを隠す(&H)";
             toolStripMenuItem8.Click +=  ToolStripMenuItem8_Click ;
             // 

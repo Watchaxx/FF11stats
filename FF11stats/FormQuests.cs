@@ -5,21 +5,23 @@ namespace FF11stats
 {
     public partial class FormQuests : Form
     {
-#pragma warning disable CS8618
-        static sbyte[] dat;
         static int com = 0;
+        static int num = 0;
+        static string name = string.Empty;
 
         public FormQuests( ToolStripMenuItem menu )
         {
             InitializeComponent();
 
+            sbyte[] dat = [];
             int i = 0;
             int p = 0;
             CheckBox[] c = new CheckBox[1];
             DisplayStrings ds = new();
             ReadOnlyDictionary<byte, string> rd = new( new Dictionary<byte, string>() );
 
-            switch( menu.Name ) {
+            name = menu.Name!;
+            switch( name ) {
             case "toolStripMenuItem80":
                 dat = cd.QuestBastok;
                 rd = new( ds.QuestBs );
@@ -75,6 +77,11 @@ namespace FF11stats
                 rd = new( ds.EmiTutorialIntermediate );
                 Text = $"目標/チュートリアル/{menu.Text}";
                 break;
+            case "toolStripMenuItem194":
+                dat = cd.EmiTutorialIntermediate2;
+                rd = new( ds.EmiTutorialIntermediate2 );
+                Text = $"目標/チュートリアル/{menu.Text}";
+                break;
             case "toolStripMenuItem103":
                 dat = cd.EmiTutorialSynthesis;
                 rd = new( ds.EmiTutorialSynthesis );
@@ -93,6 +100,11 @@ namespace FF11stats
             case "toolStripMenuItem106":
                 dat = cd.EmiTutorialLvlcap;
                 rd = new( ds.EmiTutorialLvlcap );
+                Text = $"目標/チュートリアル/{menu.Text}";
+                break;
+            case "toolStripMenuItem195":
+                dat = cd.EmiTutorialGrowth;
+                rd = new( ds.EmiTutorialGrowth );
                 Text = $"目標/チュートリアル/{menu.Text}";
                 break;
             case "toolStripMenuItem107":
@@ -341,6 +353,7 @@ namespace FF11stats
                 Text = $"目標/その他/{menu.Text}";
                 break;
             }
+            num = Math.Max( dat.Length, rd.Count );
             Array.Resize( ref c, rd.Count );
             AcceptButton = userControl11.ButtonAccept;
             CancelButton = userControl11.ButtonCancel;
@@ -355,8 +368,9 @@ namespace FF11stats
                     Text = kvp.Value,
                     UseVisualStyleBackColor = true
                 };
+                int idx = int.Parse( cb.Name.Substring( 1 ) );
 
-                if( dat[int.Parse( cb.Name.Substring( 1 ) )] != 0 ) {
+                if( idx < dat.Length && dat[idx] != 0 ) {
                     p++;
                     cb.Checked = true;
                 }
@@ -373,6 +387,7 @@ namespace FF11stats
         {
             if( e.apply is true ) {
                 int p = 0;
+                List<sbyte> l = new( Enumerable.Repeat<sbyte>( 0, num ) );
 
                 foreach( Control c in userControl11.Flp.Controls ) {
                     if( c is CheckBox b ) {
@@ -381,10 +396,210 @@ namespace FF11stats
                         if( ch != 0 ) {
                             p++;
                         }
-                        dat[int.Parse( b.Name.Substring( 1 ) )] = ch;
+                        l[int.Parse( b.Name.Substring( 1 ) )] = ch;
                     }
                 }
-                cd.EmiCompleted += p - com;
+                cd.EmiCompleted = cd.EmiCompleted - com + p;
+                switch( name ) {
+                case "toolStripMenuItem80":
+                    cd.QuestBastok = l.ToArray();
+                    break;
+                case "toolStripMenuItem81":
+                    cd.QuestWindurst = l.ToArray();
+                    break;
+                case "toolStripMenuItem82":
+                    cd.QuestJeuno = l.ToArray();
+                    break;
+                case "toolStripMenuItem84":
+                    cd.QuestOutlands = l.ToArray();
+                    break;
+                case "toolStripMenuItem85":
+                    cd.QuestAhturhgan = l.ToArray();
+                    break;
+                case "toolStripMenuItem86":
+                    cd.QuestPast = l.ToArray();
+                    break;
+                case "toolStripMenuItem87":
+                    cd.QuestAbyssea = l.ToArray();
+                    break;
+                case "toolStripMenuItem88":
+                    cd.QuestAdoulin = l.ToArray();
+                    break;
+                case "toolStripMenuItem89":
+                    cd.QuestCoalitions = l.ToArray();
+                    break;
+                case "toolStripMenuItem101":
+                    cd.EmiTutorialBasics = l.ToArray();
+                    break;
+                case "toolStripMenuItem102":
+                    cd.EmiTutorialIntermediate = l.ToArray();
+                    break;
+                case "toolStripMenuItem194":
+                    cd.EmiTutorialIntermediate2 = l.ToArray();
+                    break;
+                case "toolStripMenuItem103":
+                    cd.EmiTutorialSynthesis = l.ToArray();
+                    break;
+                case "toolStripMenuItem104":
+                    cd.EmiTutorialQuests1 = l.ToArray();
+                    break;
+                case "toolStripMenuItem105":
+                    cd.EmiTutorialArtifact = l.ToArray();
+                    break;
+                case "toolStripMenuItem106":
+                    cd.EmiTutorialLvlcap = l.ToArray();
+                    break;
+                case "toolStripMenuItem195":
+                    cd.EmiTutorialGrowth = l.ToArray();
+                    break;
+                case "toolStripMenuItem107":
+                    cd.EmiTutorialStorage = l.ToArray();
+                    break;
+                case "toolStripMenuItem108":
+                    cd.EmiTutorialWS = l.ToArray();
+                    break;
+                case "toolStripMenuItem118":
+                    cd.EmiCombatGeneral = l.ToArray();
+                    break;
+                case "toolStripMenuItem119":
+                    cd.EmiCombatSpoils = l.ToArray();
+                    break;
+                case "toolStripMenuItem120":
+                    cd.EmiCombatOriginalArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem121":
+                    cd.EmiCombatAdoulinArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem122":
+                    cd.EmiCombatZilartArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem123":
+                    cd.EmiCombatPromathiaArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem124":
+                    cd.EmiCombatAhturhganArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem125":
+                    cd.EmiCombatGoddessArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem126":
+                    cd.EmiCombatAbysseaArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem127":
+                    cd.EmiCombatEschaArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem128":
+                    cd.EmiFishingGeneral = l.ToArray();
+                    break;
+                case "toolStripMenuItem129":
+                    cd.EmiFishingTenacity = l.ToArray();
+                    break;
+                case "toolStripMenuItem130":
+                    cd.EmiCraftingGeneral = l.ToArray();
+                    break;
+                case "toolStripMenuItem131":
+                    cd.EmiCraftingEscutcheonsWoodworking = l.ToArray();
+                    break;
+                case "toolStripMenuItem132":
+                    cd.EmiCraftingEscutcheonsSmithing = l.ToArray();
+                    break;
+                case "toolStripMenuItem133":
+                    cd.EmiCraftingEscutcheonsGoldsmithing = l.ToArray();
+                    break;
+                case "toolStripMenuItem134":
+                    cd.EmiCraftingEscutcheonsClothcraft = l.ToArray();
+                    break;
+                case "toolStripMenuItem135":
+                    cd.EmiCraftingEscutcheonsLeathercraft = l.ToArray();
+                    break;
+                case "toolStripMenuItem136":
+                    cd.EmiCraftingEscutcheonsBonecraft = l.ToArray();
+                    break;
+                case "toolStripMenuItem137":
+                    cd.EmiCraftingEscutcheonsAlchemy = l.ToArray();
+                    break;
+                case "toolStripMenuItem138":
+                    cd.EmiCraftingEscutcheonsCooking = l.ToArray();
+                    break;
+                case "toolStripMenuItem139":
+                    cd.EmiHarvestingGeneral = l.ToArray();
+                    break;
+                case "toolStripMenuItem140":
+                    cd.EmiHarvestingOriginalArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem141":
+                    cd.EmiHarvestingAdoulinArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem142":
+                    cd.EmiHarvestingZilartArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem143":
+                    cd.EmiHarvestingPromathiaArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem144":
+                    cd.EmiHarvestingAhturhganArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem145":
+                    cd.EmiHarvestingGoddessArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem146":
+                    cd.EmiHarvestingAbysseaArea = l.ToArray();
+                    break;
+                case "toolStripMenuItem147":
+                    cd.EmiContentLairReive = l.ToArray();
+                    break;
+                case "toolStripMenuItem148":
+                    cd.EmiContentColonizationReive = l.ToArray();
+                    break;
+                case "toolStripMenuItem149":
+                    cd.EmiContentWildskeeperReive = l.ToArray();
+                    break;
+                case "toolStripMenuItem150":
+                    cd.EmiContentOther = l.ToArray();
+                    break;
+                case "toolStripMenuItem151":
+                    cd.EmiContentDynamis = l.ToArray();
+                    break;
+                case "toolStripMenuItem152":
+                    cd.EmiContentLimbus = l.ToArray();
+                    break;
+                case "toolStripMenuItem153":
+                    cd.EmiContentZNM = l.ToArray();
+                    break;
+                case "toolStripMenuItem154":
+                    cd.EmiContentVagary = l.ToArray();
+                    break;
+                case "toolStripMenuItem155":
+                    cd.EmiContentOmen = l.ToArray();
+                    break;
+                case "toolStripMenuItem156":
+                    cd.EmiContentOdyssey = l.ToArray();
+                    break;
+                case "toolStripMenuItem157":
+                    cd.EmiContentSortie = l.ToArray();
+                    break;
+                case "toolStripMenuItem158":
+                    cd.EmiAchievementsJobLevels = l.ToArray();
+                    break;
+                case "toolStripMenuItem159":
+                    cd.EmiAchievementsFame = l.ToArray();
+                    break;
+                case "toolStripMenuItem160":
+                    cd.EmiUnityWanted = l.ToArray();
+                    break;
+                case "toolStripMenuItem161":
+                    cd.EmiVanaversary15 = l.ToArray();
+                    break;
+                case "toolStripMenuItem162":
+                    cd.EmiOtherRoeQuests1 = l.ToArray();
+                    break;
+                case "toolStripMenuItem163":
+                    cd.EmiOtherRoeQuests2 = l.ToArray();
+                    break;
+                case "toolStripMenuItem164":
+                    cd.EmiOtherRoeQuests3 = l.ToArray();
+                    break;
+                }
             }
             Close();
             return;

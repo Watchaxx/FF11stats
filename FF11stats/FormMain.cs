@@ -19,6 +19,9 @@ namespace FF11stats
                 ChangeStatus( $"Load from {edit}" );
             }
             label1.Text = cd.Name;
+#if DEBUG
+            BackColor = Color.Purple;
+#endif
         }
 
         private void ChangeStatus( string s )
@@ -387,8 +390,10 @@ namespace FF11stats
             case "toolStripMenuItem66":
                 ShowForm( new FormJobPoints( Jobs.Run ) );
                 break;
+            //フェイスポイント
             case "toolStripMenuItem191":
             case "toolStripMenuItem192":
+            case "toolStripMenuItem193":
                 ShowForm( new FormFaithPoints( i ) );
                 break;
             //魔法
@@ -452,10 +457,12 @@ namespace FF11stats
             //エミネンス・レコード
             case "toolStripMenuItem101":
             case "toolStripMenuItem102":
+            case "toolStripMenuItem194":
             case "toolStripMenuItem103":
             case "toolStripMenuItem104":
             case "toolStripMenuItem105":
             case "toolStripMenuItem106":
+            case "toolStripMenuItem195":
             case "toolStripMenuItem107":
             case "toolStripMenuItem108":
                 ShowForm( new FormQuests( i ) );
@@ -566,10 +573,12 @@ namespace FF11stats
 
                 c += cd.EmiTutorialBasics.Count( x => x != 0 );
                 c += cd.EmiTutorialIntermediate.Count( x => x != 0 );
+                c += cd.EmiTutorialIntermediate2.Count( x => x != 0 );
                 c += cd.EmiTutorialSynthesis.Count( x => x != 0 );
                 c += cd.EmiTutorialQuests1.Count( x => x != 0 );
                 c += cd.EmiTutorialArtifact.Count( x => x != 0 );
                 c += cd.EmiTutorialLvlcap.Count( x => x != 0 );
+                c += cd.EmiTutorialGrowth.Count( x => x != 0 );
                 c += cd.EmiTutorialStorage.Count( x => x != 0 );
                 c += cd.EmiTutorialWS.Count( x => x != 0 );
                 c += cd.EmiTutorialRhapsodies.Count( x => x != 0 );
@@ -660,7 +669,7 @@ namespace FF11stats
             {
                 return s switch {
                     "toolStripMenuItem173" => "https://github.com/Watchaxx/FF11stats",
-                    "toolStripMenuItem174" => "http://www.playonline.com/ff11/index.shtml",
+                    "toolStripMenuItem174" => "https://www.playonline.com/ff11/",
                     "toolStripMenuItem175" => "https://wiki.ffo.jp/",
                     "toolStripMenuItem176" => "https://besiege.info/stat_link.htm",
                     _ => throw new ArgumentException( "外部 URL" ),

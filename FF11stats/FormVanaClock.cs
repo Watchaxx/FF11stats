@@ -666,10 +666,10 @@ namespace FF11Stats
                     break;
                 }
             }
-            label131.BackColor = ( vt.Hour & 1 ) is 0 ? cGre : cDef;
-            label132.BackColor = ( ( vt.Hour & 1 ) is 0 && ( 30 <= vt.Minute ) ) || ( ( vt.Hour & 1 ) is 1 && ( vt.Minute < 30 ) ) ? cGre : cDef;
-            label133.BackColor = ( vt.Hour & 1 ) is 1 ? cGre : cDef;
-            label134.BackColor = ( ( vt.Hour & 1 ) is 1 && ( 30 <= vt.Minute ) ) || ( ( vt.Hour & 1 ) is 0 && ( vt.Minute < 30 ) ) ? cGre : cDef;
+            label131.BackColor = ( now.Hour & 1 ) is 0 ? cGre : cDef;
+            label132.BackColor = ( ( now.Hour & 1 ) is 0 && ( 30 <= now.Minute ) ) || ( ( now.Hour & 1 ) is 1 && ( now.Minute < 30 ) ) ? cGre : cDef;
+            label133.BackColor = ( now.Hour & 1 ) is 1 ? cGre : cDef;
+            label134.BackColor = ( ( now.Hour & 1 ) is 1 && ( 30 <= now.Minute ) ) || ( ( now.Hour & 1 ) is 0 && ( now.Minute < 30 ) ) ? cGre : cDef;
             ResumeLayout();
             return;
 

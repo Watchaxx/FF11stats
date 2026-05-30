@@ -2495,7 +2495,8 @@
             // 
             toolStripMenuItem8.CheckOnClick = true;
             toolStripMenuItem8.Name = "toolStripMenuItem8";
-            toolStripMenuItem8.Size = new Size( 169, 22 );
+            toolStripMenuItem8.ShortcutKeys =  Keys.Control  |  Keys.H ;
+            toolStripMenuItem8.Size = new Size( 211, 22 );
             toolStripMenuItem8.Text = "習得済みを隠す(&H)";
             toolStripMenuItem8.Click +=  ToolStripMenuItem8_Click ;
             // 

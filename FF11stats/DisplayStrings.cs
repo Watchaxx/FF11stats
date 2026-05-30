@@ -377,6 +377,7 @@ namespace FF11stats
         const string GworaThroneRoom = "グォラ-王の間";
 
         const string af = "アーティファクト";
+        const string Ambs = "アンバスケード";
         const string cap = "レベルキャップ解放";
         const string core = "C.レイヴ：";
         const string exbg = "マイバッグ拡張";
@@ -404,6 +405,7 @@ namespace FF11stats
         #region フェイスポイント
         internal string[] FaithPtHpMp { get; } = ["HP上限", "MP上限"];
         internal string[] FaithPtStatus { get; } = ["STR", "DEX", "VIT", "AGI", "INT", "MND", "CHR"];
+        internal string[] FaithPtSkill { get; } = ["戦闘スキル", "魔法スキル"];
         #endregion
         #region クエスト
         internal Dic QuestBs { get; } = new( 100 ) { { 0, "セイレーンの涙" }, { 1, "ガルカと少女" }, { 2, "ようこそバストゥークへ" }, { 3, "待ち人来たらず" }, { 4, "クゥダフの呪い" },
@@ -604,13 +606,20 @@ namespace FF11stats
             { 90, "生態研究:ヨルシア森林" }, { 91, "生態研究:マリアミ渓谷" }, { 92, "生態研究:カミール山麓" }, { 93, "開拓応援:エヌティエル水林" }, { 94, "開拓応援:マリアミ渓谷" }, { 95, "開拓応援:カミール山麓" } };
         #endregion
         #region チュートリアル
-        internal Dic EmiTutorialBasics { get; } = new( 15 ) { { 0, "始まりの軌跡" }, { 1, "繋がりの軌跡" }, { 2, "FoVの自主訓練を受ける" }, { 3, "ヒーリングで回復する" }, { 4, "モンスターを1匹倒す" },
-            { 05, "GoVの自主訓練を受ける" }, { 6, "はじめてのアンバスケード" }, { 7, "フェイスを呼び出す" }, { 8, "フェイス：ヴァレンラール" }, { 9, "フェイス：ミリ・アリアポー" },
-            { 10, "フェイス：テンゼン" }, { 11, "フェイス：アーデルハイト" }, { 12, "フェイス：ヨアヒム" }, { 13, "A.M.A.N. トローブってなぁに？" }, { 14, "アシストチャンネル" } };
-        internal Dic EmiTutorialIntermediate { get; } = new( 16 ) {
-            { 00, "メインジョブのレベルを99にする" }, { 1, "エミネンスポイントを貯める" }, { 2, "エミネンスポイントを貯める2" }, { 3, "エミネンスポイントを貯める3" }, { 4, "アイテムレベルを117にする" },
-            { 05, "ワイルドキーパー・レイヴ" }, { 6, $"戦闘:スカーム-{RalaWaterwaysU}" }, { 7, $"戦闘:スカーム-{CirdasCavernsU}" }, { 8, $"戦闘:スカーム-{YorciaWealdU}" }, { 9, "アンバスケードをクリアする" },
-            { 10, "アーティファクトを強化" }, { 11, "アーティファクトを強化2" }, { 12, $"戦闘:A・スカーム-{RalaWaterwaysU}" }, { 13, $"戦闘:A・スカーム-{CirdasCavernsU}" }, { 14, $"A・スカーム-{YorciaWealdU}" }, { 15, "メンターライセンス" } };
+        internal Dic EmiTutorialBasics { get; } = new( 16 ) { { 0, "始まりの軌跡" }, { 1, "繋がりの軌跡" }, { 4, "モンスターを1匹倒す" }, { 2, "FoVの自主訓練を受ける" },
+            { 3, "ヒーリングで回復する" }, { 5, "GoVの自主訓練を受ける" }, { 15, "ディードってすごいおトク！" }, { 7, "フェイスを呼び出す" },
+            { 8, "フェイス：ヴァレンラール" }, { 9, "フェイス：ミリ・アリアポー" }, { 10, "フェイス：テンゼン" }, { 11, "フェイス：アーデルハイト" },
+            { 12, "フェイス：ヨアヒム" }, { 6, $"はじめての{Ambs}" }, { 13, "A.M.A.N. トローブってなぁに？" }, { 14, "アシストチャンネル" } };
+        internal Dic EmiTutorialIntermediate { get; } = new( 18 ) { { 0, "メインジョブのレベルを99にする" }, { 1, "エミネンスポイントを貯める" }, { 2, "エミネンスポイントを貯める2" },
+            { 3, "エミネンスポイントを貯める3" }, { 4, "アイテムレベルを117にする" }, { 05, "ワイルドキーパー・レイヴ" },
+            { 6, $"戦闘:スカーム-{RalaWaterwaysU}" }, { 7, $"戦闘:スカーム-{CirdasCavernsU}" }, { 8, $"戦闘:スカーム-{YorciaWealdU}" },
+            { 9, $"{Ambs}をクリアする" }, { 10, $"{af}を強化" }, { 11, $"{af}を強化2" },
+            { 16, "レリック装束を強化" }, { 17, "レリック装束を強化2" }, { 12, $"戦闘:A・スカーム-{RalaWaterwaysU}" },
+            { 13, $"戦闘:A・スカーム-{CirdasCavernsU}" }, { 14, $"A・スカーム-{YorciaWealdU}" }, { 15, "メンターライセンス" } };
+        internal Dic EmiTutorialIntermediate2 { get; } = new( 18 ) { { 0, $"{Ambs}の防具を入手" }, { 1, $"{Ambs}の防具を強化" }, { 2, $"{Ambs}の防具を強化2" },
+            { 3, $"{Ambs}の武器を入手" }, { 4, $"{Ambs}の武器を強化" }, { 5, $"{Ambs}の武器を強化2" }, { 6, $"{Ambs}の武器を強化3" }, { 7, "オーメンの詰みルートに進入する" },
+            { 8, $"{af}ILv119+2" }, { 9, $"{af}ILv119+3" }, { 10, "デュナミス〔Ｄ〕・共有に進入する" }, { 11, "レリック装束ILv119+2" }, { 12, "レリック装束ILv119+3" },
+            { 13, "ベガリーインスペクターに進入する" }, { 14, "エンピリアン装束ILv119" }, { 15, "ソーティに進入する" }, { 16, "エンピリアン装束ILv119+2" }, { 17, "エンピリアン装束ILv119+3" } };
         internal Dic EmiTutorialSynthesis { get; } = new( 16 ) { { 0, $"木工{gimt}" }, { 1, $"鍛冶{gimt}" }, { 2, $"彫金{gimt}" }, { 3, $"織工{gimt}" }, { 4, $"革工{gimt}" },
             { 5, $"骨工{gimt}" }, { 6, $"錬金術{gimt}" }, { 7, $"調理{gimt}" }, { 8, "木工：化粧箱" }, { 9, "鍛冶：ブロンズナイフ" }, { 10, "彫金：カッパーリング" },
             { 11, "裁縫：ヘッドギア" }, { 12, "革細工：レザーバンダナ" }, { 13, "骨細工：胡粉" }, { 14, "錬金術：黒インク" }, { 15, "調理：石のスープ" } };
@@ -620,7 +629,7 @@ namespace FF11stats
             { 15, $"{SAM}{jobg}" }, { 16, $"{NIN}{jobg}" }, { 17, $"{DRG}{jobg}" }, { 18, $"{SMN}{jobg}" }, { 19, $"{BLU}{jobg}" },
             { 20, $"{COR}{jobg}" }, { 21, $"{PUP}{jobg}" }, { 22, $"{DNC}{jobg}" }, { 23, $"{SCH}{jobg}" }, { 24, $"{GEO}{jobg}" }, { 25, $"{RUN}{jobg}" } };
         internal Dic EmiTutorialArtifact { get; } = new( 66 ) { { 0, $"{WAR}{af}1" }, { 1, $"{WAR}{af}2" }, { 2, $"{WAR}{af}3" }, { 3, $"{MNK}{af}1" }, { 4, $"{MNK}{af}2" }, { 5, $"{MNK}{af}3" },
-            { 06, $"{WHM}{af}1" }, { 7, $"{WHM}{af}2" }, { 8, $"{WHM}{af}3" }, { 9, $"{BLM}{af}1" }, { 10, $"{BLM}{af}2" }, { 11, $"{BLM}{af}3" },
+            { 06, $"{WHM}{af}1" }, { 07, $"{WHM}{af}2" }, { 08, $"{WHM}{af}3" }, { 09, $"{BLM}{af}1" }, { 10, $"{BLM}{af}2" }, { 11, $"{BLM}{af}3" },
             { 12, $"{RDM}{af}1" }, { 13, $"{RDM}{af}2" }, { 14, $"{RDM}{af}3" }, { 15, $"{THF}{af}1" }, { 16, $"{THF}{af}2" }, { 17, $"{THF}{af}3" },
             { 18, $"{PLD}{af}1" }, { 19, $"{PLD}{af}2" }, { 20, $"{PLD}{af}3" }, { 21, $"{DRK}{af}1" }, { 22, $"{DRK}{af}2" }, { 23, $"{DRK}{af}3" },
             { 24, $"{BST}{af}1" }, { 25, $"{BST}{af}2" }, { 26, $"{BST}{af}3" }, { 27, $"{BRD}{af}1" }, { 28, $"{BRD}{af}2" }, { 29, $"{BRD}{af}3" },
@@ -634,6 +643,7 @@ namespace FF11stats
             { 05, $"{cap}80" }, { 6, $"{cap}85" }, { 7, $"{cap}90" }, { 8, $"{cap}95" }, { 9, $"{cap}99" },
             { 10, $"{cap}75({BLU})" }, { 11, $"{cap}75({COR})" }, { 12, $"{cap}75({PUP})" }, { 13, $"{cap}75({DNC})" }, { 14, $"{cap}75({SCH})" },
             { 15, $"{cap}75({GEO})" }, { 16, $"{cap}75({RUN})" } };
+        internal Dic EmiTutorialGrowth { get; } = new( 5 ) { { 0, "メリットポイント解放" }, { 1, "武神流秘奥義解放" }, { 2, "ジョブポイント解放" }, { 3, "フェイスポイント解放" }, { 4, "マスターレベル解放" } };
         internal Dic EmiTutorialStorage { get; } = new( 13 ) { { 0, $"{exbg}35" }, { 1, $"{exbg}40" }, { 2, $"{exbg}45" }, { 3, $"{exbg}50" }, { 4, $"{exbg}55" },
             { 05, $"{exbg}60" }, { 6, $"{exbg}65" }, { 7, $"{exbg}70" }, { 8, $"{exbg}75" }, { 9, $"{exbg}80" },
             { 10, $"{exmb}60" }, { 11, $"{exmb}70" }, { 12, $"{exmb}80" } };
@@ -745,13 +755,18 @@ namespace FF11stats
             { 02, "Treasure Chest、Coffer開錠" }, { 3, "印章バトルフィールド" }, { 4, $"{to}Kirin" }, { 5, $"{to}Genbu" }, { 6, $"{to}Suzaku" },
             { 07, $"{to}Seiryu" }, { 8, $"{to}Byakko" }, { 9, $"{to}Jailer of Justice" }, { 10, $"{to}Jailer of Hope" }, { 11, $"{to}Jailer of Prudence" },
             { 12, $"{to}Jailer of Love" }, { 13, $"{to}Battleclad Chariot" }, { 14, $"{to}Armored CHariot" }, { 15, $"{to}Long-Bowed Chariot" }, { 16, $"{to}Long-Armed Chariot" } };
-        internal Dic EmiContentDynamis { get; } = new( 30 ) {
-            { 00, $"{to}Overlord's Tombstone" }, { 1, $"{to}Bladeburner Rokgevok" }, { 2, $"{to}Steelshank Kratzvatz" }, { 3, $"{to}Bloodfist Voshgrosh" }, { 4, $"{to}Spellspear Djokvukk" },
-            { 05, $"{to}Gu'Dha Effigy" }, { 6, $"{to}Zo'Pha Forgesoul" }, { 7, $"{to}Ra'Gho Darkfound" }, { 8, $"{to}Va'Zhe Pummelsong" }, { 9, $"{to}Bu'Bho Truesteel" },
-            { 10, $"{to}Tzee Xicu Idol" }, { 11, $"{to}Xuu Bhoqa the Enigma" }, { 12, $"{to}Fuu Tzapo the Blessed" }, { 13, $"{to}Naa Yixo the Stillrage" }, { 14, $"{to}Tee Zaksa the Ceaseless" },
-            { 15, $"{to}Goblin Golem" }, { 16, $"{to}Quicktrix Hexhands" }, { 17, $"{to}Feralox Honeylips" }, { 18, $"{to}Scourquix Scaleskin" }, { 19, $"{to}Wilywox Tenderpalm" },
-            { 20, $"{to}Angra Mainyu" }, { 21, $"{to}Taquede" }, { 22, $"{to}Pignonpausard" }, { 23, $"{to}Hitaume" }, { 24, $"{to}Cavanneche" },
-            { 25, $"{to}Dynamis Lord" }, { 26, $"{to}Duke Haures" }, { 27, $"{to}Marquis Caim" }, { 28, $"{to}Baron Avnas" }, { 29, $"{to}Count Haagenti" } };
+        internal Dic EmiContentDynamis { get; } = new( 36 ) { { 30, $"{DynamisSandOria}に進入する" }, { 0, $"{to}Overlord's Tombstone" }, { 1, $"{to}Bladeburner Rokgevok" },
+            { 02, $"{to}Steelshank Kratzvatz" }, { 3, $"{to}Bloodfist Voshgrosh" }, { 4, $"{to}Spellspear Djokvukk" },
+            { 31, $"{DynamisBastok}に進入する" }, { 5, $"{to}Gu'Dha Effigy" }, { 6, $"{to}Zo'Pha Forgesoul" },
+            { 07, $"{to}Ra'Gho Darkfound" }, { 8, $"{to}Va'Zhe Pummelsong" }, { 9, $"{to}Bu'Bho Truesteel" },
+            { 32, $"{DynamisWindurst}に進入する" }, { 10, $"{to}Tzee Xicu Idol" }, { 11, $"{to}Xuu Bhoqa the Enigma" },
+            { 12, $"{to}Fuu Tzapo the Blessed" }, { 13, $"{to}Naa Yixo the Stillrage" }, { 14, $"{to}Tee Zaksa the Ceaseless" },
+            { 33, $"{DynamisJeuno}に進入する" }, { 15, $"{to}Goblin Golem" }, { 16, $"{to}Quicktrix Hexhands" },
+            { 17, $"{to}Feralox Honeylips" }, { 18, $"{to}Scourquix Scaleskin" }, { 19, $"{to}Wilywox Tenderpalm" },
+            { 34, $"{DynamisBeaucedine}に進入する" }, { 20, $"{to}Angra Mainyu" }, { 21, $"{to}Taquede" },
+            { 22, $"{to}Pignonpausard" }, { 23, $"{to}Hitaume" }, { 24, $"{to}Cavanneche" },
+            { 35, $"{DynamisXarcabard}に進入する" }, { 25, $"{to}Dynamis Lord" }, { 26, $"{to}Duke Haures" },
+            { 27, $"{to}Marquis Caim" }, { 28, $"{to}Baron Avnas" }, { 29, $"{to}Count Haagenti" }, };
         internal Dic EmiContentLimbus { get; } = new( 12 ) { { 0, $"{spil}(アイボリーチップ)" }, { 1, $"{spil}(スカーレットチップ)" }, { 2, $"{spil}(エメラルドチップ)" }, { 3, $"{spil}(オーキッドチップ)" },
             { 4, $"{spil}(セルリアンチップ)" }, { 5, $"{spil}(シルバーチップ)" }, { 6, $"{spil}(スモーキーチップ)" }, { 7, $"{spil}(マゼンタチップ)" },
             { 8, $"{spil}(チャコールチップ)" }, { 9, $"{spil}(スマルトチップ)" }, { 10, $"{to}Proto-Ultima" }, { 11, $"{to}Proto-Omega" } };
@@ -806,7 +821,7 @@ namespace FF11stats
             { 05, "夢幻泡影" }, { 6, "万物流転" }, { 7, "獅子雷閃" }, { 8, "兎死狗烹" }, { 9, "行雲流水" },
             { 10, "天下無双" }, { 11, "滄海一粟" }, { 12, "諸行無常" }, { 13, "子虚烏有" }, { 14, "銘心鏤骨" } };
         internal Dic EmiOtherRoeQuests2 { get; } = new( 7 ) { { 0, $"{yug}1" }, { 1, $"{yug}2" }, { 2, $"{yug}3" }, { 3, $"{yug}4" }, { 4, $"{yug}5" }, { 5, $"{yug}6" }, { 6, "アシェラ激励指令" } };
-        internal Dic EmiOtherRoeQuests3 { get; } = new( 8 ) { { 0, "「憎悪」で焼きこがせ" }, { 1, "「驕慢」で腐らせろ" },
+        internal Dic EmiOtherRoeQuests3 { get; } = new( 9 ) { { 0, "「憎悪」で焼きこがせ" }, { 1, "「驕慢」で腐らせろ" },
             { 2, "「嫉妬」でかじりとれ" }, { 3, "「怯懦」で押しつぶせ" }, { 4, "「無知」でうつろにしろ" },
             { 5, "絆パワーですわ！" }, { 6, "もっと絆パワーですわ！" }, { 7, "もっともっと絆パワーですわ！" } };
         #endregion

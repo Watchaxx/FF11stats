@@ -195,6 +195,7 @@
         #region フェイスポイント
         public sbyte[] FaithPtHpMp { get; set; } = new sbyte[2];
         public sbyte[] FaithPtStatus { get; set; } = new sbyte[7];
+        public sbyte[] FaithPtSkill { get; set; } = new sbyte[2];
         #endregion
         #region 魔法
         public sbyte[] Magic { get; set; } = new sbyte[1023];
@@ -220,12 +221,14 @@
         #endregion
         #region エミネンス
         public int EmiCompleted { get; set; } = 0;
-        public sbyte[] EmiTutorialBasics { get; set; } = new sbyte[15];
-        public sbyte[] EmiTutorialIntermediate { get; set; } = new sbyte[16];
+        public sbyte[] EmiTutorialBasics { get; set; } = new sbyte[16];
+        public sbyte[] EmiTutorialIntermediate { get; set; } = new sbyte[18];
+        public sbyte[] EmiTutorialIntermediate2 { get; set; } = new sbyte[18];
         public sbyte[] EmiTutorialSynthesis { get; set; } = new sbyte[16];
         public sbyte[] EmiTutorialQuests1 { get; set; } = new sbyte[26];
         public sbyte[] EmiTutorialArtifact { get; set; } = new sbyte[66];
         public sbyte[] EmiTutorialLvlcap { get; set; } = new sbyte[17];
+        public sbyte[] EmiTutorialGrowth { get; set; } = new sbyte[5];
         public sbyte[] EmiTutorialStorage { get; set; } = new sbyte[17];
         public sbyte[] EmiTutorialWS { get; set; } = new sbyte[14];
         public sbyte[] EmiTutorialRhapsodies { get; set; } = new sbyte[24];
@@ -270,7 +273,7 @@
         public sbyte[] EmiContentColonizationReive { get; set; } = new sbyte[14];
         public sbyte[] EmiContentWildskeeperReive { get; set; } = new sbyte[6];
         public sbyte[] EmiContentOther { get; set; } = new sbyte[17];
-        public sbyte[] EmiContentDynamis { get; set; } = new sbyte[30];
+        public sbyte[] EmiContentDynamis { get; set; } = new sbyte[36];
         public sbyte[] EmiContentLimbus { get; set; } = new sbyte[12];
         public sbyte[] EmiContentZNM { get; set; } = new sbyte[27];
         public sbyte[] EmiContentVagary { get; set; } = new sbyte[5];

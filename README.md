@@ -1,7 +1,11 @@
 # FF11stats
 このソフトは，かつて一世を風靡した(?) FFXI Member Registration System のオフライン版のようなものが欲しくて開発しています。<br>
 動作には .NET 10 Desktop Runtime が必要です。<br>
-&nbsp;&nbsp;https://dotnet.microsoft.com/ja-jp/download/dotnet/10.0
+&nbsp;&nbsp;https://dotnet.microsoft.com/ja-jp/download/dotnet/10.0<br>
+非推奨ですが，ランタイムをインストールできない等の場合は，ランタイム同梱版 (FF11stats_vx.x.x_RT.zip) をご利用下さい。
+
+> [!NOTE]
+> 他プロセスのメモリ領域にアクセスするようなコードは含まれていません。
 
 ## 開発環境
 - Windows 11 23H2

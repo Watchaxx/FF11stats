@@ -22,7 +22,6 @@
         internal const byte MaxJoblvl = 99;
         internal const byte MaxMstlvl = 50;
         internal const byte MaxMeripo = 10;
-        internal const decimal MaxCombatSkill = 440m;
         internal const decimal MaxSynergySkill = 80m;
         internal const decimal MaxSynthSkill1 = 70m;
         internal const decimal MaxSynthSkill2 = 110m;
@@ -32,6 +31,54 @@
         internal static string edit = string.Empty;
         internal static string sea = string.Empty;
         internal static ChrDat cd = new();
+
+        internal enum ItemKind
+        {
+            None,
+            Permanent,
+            Abyssea,
+            Voidwatch,
+            GeasFete,
+            Mounts,
+            MogGarden,
+            MagicalMaps,
+            ClaimSlips,
+            JobAttire,
+            EventNPC,
+            MogSlip01,
+            MogSlip02,
+            MogSlip03,
+            MogSlip04,
+            MogSlip05,
+            MogSlip06,
+            MogSlip07,
+            MogSlip08,
+            MogSlip09,
+            MogSlip10,
+            MogSlip11,
+            MogSlip12,
+            MogSlip13,
+            MogSlip14,
+            MogSlip15,
+            MogSlip16,
+            MogSlip17,
+            MogSlip18,
+            MogSlip19,
+            MogSlip20,
+            MogSlip21,
+            MogSlip22,
+            MogSlip23,
+            MogSlip24,
+            MogSlip25,
+            MogSlip26,
+            MogSlip27,
+            MogSlip28,
+            MogSlip29,
+            MogSlip30,
+            MogSlip31,
+            MogSlip32,
+            MogSlip33
+        }
 
         internal enum Jobs
         {
@@ -456,6 +503,83 @@
         internal static bool StrComp( string a, string b )
         {
             return string.Compare( a, b, StringComparison.Ordinal ) is 0;
+        }
+
+        /// <summary>
+        /// エミネンス・レコードのコンプリート数を検証する
+        /// </summary>
+        internal static void VerifyEmiCompNum()
+        {
+            int c = 0;
+
+            c += cd.EmiTutorialBasics.Count( x => x != 0 );
+            c += cd.EmiTutorialIntermediate.Count( x => x != 0 );
+            c += cd.EmiTutorialIntermediate2.Count( x => x != 0 );
+            c += cd.EmiTutorialSynthesis.Count( x => x != 0 );
+            c += cd.EmiTutorialQuests1.Count( x => x != 0 );
+            c += cd.EmiTutorialArtifact.Count( x => x != 0 );
+            c += cd.EmiTutorialLvlcap.Count( x => x != 0 );
+            c += cd.EmiTutorialGrowth.Count( x => x != 0 );
+            c += cd.EmiTutorialStorage.Count( x => x != 0 );
+            c += cd.EmiTutorialWS.Count( x => x != 0 );
+            c += cd.EmiTutorialRhapsodies.Count( x => x != 0 );
+            c += cd.EmiTutorialSandoria.Count( x => x != 0 );
+            c += cd.EmiTutorialBastok.Count( x => x != 0 );
+            c += cd.EmiTutorialWindurst.Count( x => x != 0 );
+            c += cd.EmiTutorialZilart.Count( x => x != 0 );
+            c += cd.EmiTutorialPromathia.Count( x => x != 0 );
+            c += cd.EmiTutorialAhturhgan.Count( x => x != 0 );
+            c += cd.EmiTutorialAltana.Count( x => x != 0 );
+            c += cd.EmiTutorialAdoulin.Count( x => x != 0 );
+            c += cd.EmiCombatGeneral.Count( x => x != 0 );
+            c += cd.EmiCombatSpoils.Count( x => x != 0 );
+            c += cd.EmiCombatOriginalArea.Count( x => x != 0 );
+            c += cd.EmiCombatAdoulinArea.Count( x => x != 0 );
+            c += cd.EmiCombatZilartArea.Count( x => x != 0 );
+            c += cd.EmiCombatPromathiaArea.Count( x => x != 0 );
+            c += cd.EmiCombatAhturhganArea.Count( x => x != 0 );
+            c += cd.EmiCombatGoddessArea.Count( x => x != 0 );
+            c += cd.EmiCombatAbysseaArea.Count( x => x != 0 );
+            c += cd.EmiCombatEschaArea.Count( x => x != 0 );
+            c += cd.EmiFishingGeneral.Count( x => x != 0 );
+            c += cd.EmiFishingTenacity.Count( x => x != 0 );
+            c += cd.EmiCraftingGeneral.Count( x => x != 0 );
+            c += cd.EmiCraftingEscutcheonsWoodworking.Count( x => x != 0 );
+            c += cd.EmiCraftingEscutcheonsClothcraft.Count( x => x != 0 );
+            c += cd.EmiCraftingEscutcheonsAlchemy.Count( x => x != 0 );
+            c += cd.EmiCraftingEscutcheonsBonecraft.Count( x => x != 0 );
+            c += cd.EmiCraftingEscutcheonsCooking.Count( x => x != 0 );
+            c += cd.EmiCraftingEscutcheonsGoldsmithing.Count( x => x != 0 );
+            c += cd.EmiCraftingEscutcheonsLeathercraft.Count( x => x != 0 );
+            c += cd.EmiCraftingEscutcheonsSmithing.Count( x => x != 0 );
+            c += cd.EmiHarvestingGeneral.Count( x => x != 0 );
+            c += cd.EmiHarvestingOriginalArea.Count( x => x != 0 );
+            c += cd.EmiHarvestingAdoulinArea.Count( x => x != 0 );
+            c += cd.EmiHarvestingZilartArea.Count( x => x != 0 );
+            c += cd.EmiHarvestingPromathiaArea.Count( x => x != 0 );
+            c += cd.EmiHarvestingAhturhganArea.Count( x => x != 0 );
+            c += cd.EmiHarvestingGoddessArea.Count( x => x != 0 );
+            c += cd.EmiHarvestingAbysseaArea.Count( x => x != 0 );
+            c += cd.EmiContentLairReive.Count( x => x != 0 );
+            c += cd.EmiContentColonizationReive.Count( x => x != 0 );
+            c += cd.EmiContentWildskeeperReive.Count( x => x != 0 );
+            c += cd.EmiContentOther.Count( x => x != 0 );
+            c += cd.EmiContentDynamis.Count( x => x != 0 );
+            c += cd.EmiContentLimbus.Count( x => x != 0 );
+            c += cd.EmiContentZNM.Count( x => x != 0 );
+            c += cd.EmiContentVagary.Count( x => x != 0 );
+            c += cd.EmiContentOmen.Count( x => x != 0 );
+            c += cd.EmiContentOdyssey.Count( x => x != 0 );
+            c += cd.EmiContentSortie.Count( x => x != 0 );
+            c += cd.EmiAchievementsJobLevels.Count( x => x != 0 );
+            c += cd.EmiAchievementsFame.Count( x => x != 0 );
+            c += cd.EmiUnityWanted.Count( x => x != 0 );
+            c += cd.EmiVanaversary15.Count( x => x != 0 );
+            c += cd.EmiOtherRoeQuests1.Count( x => x != 0 );
+            c += cd.EmiOtherRoeQuests2.Count( x => x != 0 );
+            c += cd.EmiOtherRoeQuests3.Count( x => x != 0 );
+            cd.EmiCompleted = c;
+            return;
         }
     }
 }

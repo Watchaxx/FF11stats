@@ -10,6 +10,7 @@ namespace FF11stats
         {
             InitializeComponent();
 
+            SuspendLayout();
             Icon = Resource1.logo1;
             if( string.IsNullOrWhiteSpace( edit ) is true ) {
                 SetTitle();
@@ -20,8 +21,9 @@ namespace FF11stats
             }
             label1.Text = cd.Name;
 #if DEBUG
-            BackColor = Color.Purple;
+            BackColor = Color.MediumPurple;
 #endif
+            ResumeLayout();
         }
 
         private void ChangeStatus( string s )
@@ -106,8 +108,7 @@ namespace FF11stats
                 contextMenuStrip1.Show( b, new Point( 0, b.Height ) );
                 break;
             case "button2":
-                MessageBox.Show( "工事中(´・ω・｀)" );
-                //contextMenuStrip10.Show( b, new Point( 0, b.Height ) );
+                contextMenuStrip10.Show( b, new Point( 0, b.Height ) );
                 break;
             case "button3":
                 contextMenuStrip9.Show( b, new Point( 0, b.Height ) );
@@ -162,6 +163,7 @@ namespace FF11stats
         private void ToolStripMenuItem4_Click( object sender, EventArgs e )
         {
             if( string.IsNullOrWhiteSpace( edit ) is false ) {
+                VerifyEmiCompNum();
                 File.WriteAllBytes( edit, JsonSerializer.SerializeToUtf8Bytes( cd ) );
                 ChangeStatus( $"Save to {edit}" );
             } else {
@@ -177,6 +179,7 @@ namespace FF11stats
             sfd.FileName = cd.Name;
             sfd.Filter = "キャラクタ ファイル|*.chr";
             if( sfd.ShowDialog() is DialogResult.OK ) {
+                VerifyEmiCompNum();
                 File.WriteAllBytes( sfd.FileName, JsonSerializer.SerializeToUtf8Bytes( cd ) );
                 edit = sfd.FileName;
                 SetTitle( sfd.FileName.Split( '\\' )[^1] );
@@ -396,6 +399,16 @@ namespace FF11stats
             case "toolStripMenuItem193":
                 ShowForm( new FormFaithPoints( i ) );
                 break;
+            //装備
+            case "toolStripMenuItem198":
+                ShowForm( new FormItems( ItemKind.MogSlip01 ) );
+                break;
+            case "toolStripMenuItem199":
+                ShowForm( new FormItems( ItemKind.MogSlip02 ) );
+                break;
+            case "toolStripMenuItem200":
+                ShowForm( new FormItems( ItemKind.MogSlip03 ) );
+                break;
             //魔法
             case "toolStripMenuItem67":
                 ShowForm( new FormMagicWhite() );
@@ -543,14 +556,16 @@ namespace FF11stats
             case "toolStripMenuItem164":
                 ShowForm( new FormQuests( i ) );
                 break;
-            case "toolStripMenuItem179":
-            case "toolStripMenuItem180":
-            case "toolStripMenuItem181":
-            case "toolStripMenuItem182":
-            case "toolStripMenuItem183":
-            case "toolStripMenuItem184":
-                MessageBox.Show( "工事中(´・ω・｀)" );
-                break;
+            /*
+        case "toolStripMenuItem179":
+        case "toolStripMenuItem180":
+        case "toolStripMenuItem181":
+        case "toolStripMenuItem182":
+        case "toolStripMenuItem183":
+        case "toolStripMenuItem184":
+            MessageBox.Show( "工事中(´・ω・｀)" );
+            break;
+            */
             //移動
             case "toolStripMenuItem167":
             case "toolStripMenuItem168":
@@ -558,6 +573,9 @@ namespace FF11stats
             case "toolStripMenuItem170":
             case "toolStripMenuItem171":
                 ShowForm( new FormMoveSGHP( i ) );
+                break;
+            default:
+                ChangeStatus( "未実装(´・ω・｀)" );
                 break;
             }
             return;
@@ -569,75 +587,7 @@ namespace FF11stats
 
             if( MessageBox.Show( $"正しく入力してもコンプリート数がゲーム内の表示と一致しない場合に実行してください。{Environment.NewLine}コンプリート数の整合性チェックと修復をしますか？",
                 caption, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2 ) is DialogResult.Yes ) {
-                int c = 0;
-
-                c += cd.EmiTutorialBasics.Count( x => x != 0 );
-                c += cd.EmiTutorialIntermediate.Count( x => x != 0 );
-                c += cd.EmiTutorialIntermediate2.Count( x => x != 0 );
-                c += cd.EmiTutorialSynthesis.Count( x => x != 0 );
-                c += cd.EmiTutorialQuests1.Count( x => x != 0 );
-                c += cd.EmiTutorialArtifact.Count( x => x != 0 );
-                c += cd.EmiTutorialLvlcap.Count( x => x != 0 );
-                c += cd.EmiTutorialGrowth.Count( x => x != 0 );
-                c += cd.EmiTutorialStorage.Count( x => x != 0 );
-                c += cd.EmiTutorialWS.Count( x => x != 0 );
-                c += cd.EmiTutorialRhapsodies.Count( x => x != 0 );
-                c += cd.EmiTutorialSandoria.Count( x => x != 0 );
-                c += cd.EmiTutorialBastok.Count( x => x != 0 );
-                c += cd.EmiTutorialWindurst.Count( x => x != 0 );
-                c += cd.EmiTutorialZilart.Count( x => x != 0 );
-                c += cd.EmiTutorialPromathia.Count( x => x != 0 );
-                c += cd.EmiTutorialAhturhgan.Count( x => x != 0 );
-                c += cd.EmiTutorialAltana.Count( x => x != 0 );
-                c += cd.EmiTutorialAdoulin.Count( x => x != 0 );
-                c += cd.EmiCombatGeneral.Count( x => x != 0 );
-                c += cd.EmiCombatSpoils.Count( x => x != 0 );
-                c += cd.EmiCombatOriginalArea.Count( x => x != 0 );
-                c += cd.EmiCombatAdoulinArea.Count( x => x != 0 );
-                c += cd.EmiCombatZilartArea.Count( x => x != 0 );
-                c += cd.EmiCombatPromathiaArea.Count( x => x != 0 );
-                c += cd.EmiCombatAhturhganArea.Count( x => x != 0 );
-                c += cd.EmiCombatGoddessArea.Count( x => x != 0 );
-                c += cd.EmiCombatAbysseaArea.Count( x => x != 0 );
-                c += cd.EmiCombatEschaArea.Count( x => x != 0 );
-                c += cd.EmiFishingGeneral.Count( x => x != 0 );
-                c += cd.EmiFishingTenacity.Count( x => x != 0 );
-                c += cd.EmiCraftingGeneral.Count( x => x != 0 );
-                c += cd.EmiCraftingEscutcheonsWoodworking.Count( x => x != 0 );
-                c += cd.EmiCraftingEscutcheonsClothcraft.Count( x => x != 0 );
-                c += cd.EmiCraftingEscutcheonsAlchemy.Count( x => x != 0 );
-                c += cd.EmiCraftingEscutcheonsBonecraft.Count( x => x != 0 );
-                c += cd.EmiCraftingEscutcheonsCooking.Count( x => x != 0 );
-                c += cd.EmiCraftingEscutcheonsGoldsmithing.Count( x => x != 0 );
-                c += cd.EmiCraftingEscutcheonsLeathercraft.Count( x => x != 0 );
-                c += cd.EmiCraftingEscutcheonsSmithing.Count( x => x != 0 );
-                c += cd.EmiHarvestingGeneral.Count( x => x != 0 );
-                c += cd.EmiHarvestingOriginalArea.Count( x => x != 0 );
-                c += cd.EmiHarvestingAdoulinArea.Count( x => x != 0 );
-                c += cd.EmiHarvestingZilartArea.Count( x => x != 0 );
-                c += cd.EmiHarvestingPromathiaArea.Count( x => x != 0 );
-                c += cd.EmiHarvestingAhturhganArea.Count( x => x != 0 );
-                c += cd.EmiHarvestingGoddessArea.Count( x => x != 0 );
-                c += cd.EmiHarvestingAbysseaArea.Count( x => x != 0 );
-                c += cd.EmiContentLairReive.Count( x => x != 0 );
-                c += cd.EmiContentColonizationReive.Count( x => x != 0 );
-                c += cd.EmiContentWildskeeperReive.Count( x => x != 0 );
-                c += cd.EmiContentOther.Count( x => x != 0 );
-                c += cd.EmiContentDynamis.Count( x => x != 0 );
-                c += cd.EmiContentLimbus.Count( x => x != 0 );
-                c += cd.EmiContentZNM.Count( x => x != 0 );
-                c += cd.EmiContentVagary.Count( x => x != 0 );
-                c += cd.EmiContentOmen.Count( x => x != 0 );
-                c += cd.EmiContentOdyssey.Count( x => x != 0 );
-                c += cd.EmiContentSortie.Count( x => x != 0 );
-                c += cd.EmiAchievementsJobLevels.Count( x => x != 0 );
-                c += cd.EmiAchievementsFame.Count( x => x != 0 );
-                c += cd.EmiUnityWanted.Count( x => x != 0 );
-                c += cd.EmiVanaversary15.Count( x => x != 0 );
-                c += cd.EmiOtherRoeQuests1.Count( x => x != 0 );
-                c += cd.EmiOtherRoeQuests2.Count( x => x != 0 );
-                c += cd.EmiOtherRoeQuests3.Count( x => x != 0 );
-                cd.EmiCompleted = c;
+                VerifyEmiCompNum();
                 MessageBox.Show( "完了しました。", caption, MessageBoxButtons.OK, MessageBoxIcon.Information );
             }
             return;
@@ -700,6 +650,7 @@ namespace FF11stats
                         break;
                     }
                 }
+                VerifyEmiCompNum();
                 File.WriteAllBytes( p, JsonSerializer.SerializeToUtf8Bytes( cd ) );
                 break;
             case DialogResult.Cancel:

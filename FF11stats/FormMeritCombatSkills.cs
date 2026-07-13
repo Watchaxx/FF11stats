@@ -30,7 +30,7 @@ namespace FF11stats
             numericUpDown13.Value = b[12];
             numericUpDown14.Value = b[13];
             numericUpDown15.Value = b[14];
-            b=MeripoLoad( cd.MeritCombatSkills2 );
+            b = MeripoLoad( cd.MeritCombatSkills2 );
             numericUpDown16.Value = b[0];
             numericUpDown17.Value = b[1];
             numericUpDown18.Value = b[2];

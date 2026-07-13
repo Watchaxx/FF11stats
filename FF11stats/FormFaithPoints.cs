@@ -86,27 +86,21 @@ namespace FF11Stats
             case "toolStripMenuItem191":
                 foreach( Control c in tableLayoutPanel1.Controls ) {
                     if( c is NumericUpDown n ) {
-                        int i = int.Parse( n.Name[1..] );
-
-                        Program.cd.FaithPtHpMp[i] = (sbyte)n.Value;
+                        Program.cd.FaithPtHpMp[int.Parse( n.Name[1..] )] = (sbyte)n.Value;
                     }
                 }
                 break;
             case "toolStripMenuItem192":
                 foreach( Control c in tableLayoutPanel1.Controls ) {
                     if( c is NumericUpDown n ) {
-                        int i = int.Parse( n.Name[1..] );
-
-                        Program.cd.FaithPtStatus[i] = (sbyte)n.Value;
+                        Program.cd.FaithPtStatus[int.Parse( n.Name[1..] )] = (sbyte)n.Value;
                     }
                 }
                 break;
             case "toolStripMenuItem193":
                 foreach( Control c in tableLayoutPanel1.Controls ) {
                     if( c is NumericUpDown n ) {
-                        int i = int.Parse( n.Name[1..] );
-
-                        Program.cd.FaithPtSkill[i] = (sbyte)n.Value;
+                        Program.cd.FaithPtSkill[int.Parse( n.Name[1..] )] = (sbyte)n.Value;
                     }
                 }
                 break;

@@ -383,6 +383,7 @@ namespace FF11stats
             userControl11.NumComp = $"{NumComp}{p}";
         }
 
+#pragma warning disable IDE0305
         private void Button_Click( UserControl1.ButtonEventArgs e )
         {
             if( e.apply is true ) {

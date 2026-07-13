@@ -1796,7 +1796,7 @@
             Name = "FormVanaClock";
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "ヴァナ時計";
+            Text = "ヴァナクロック";
             flowLayoutPanel1.ResumeLayout( false );
             tableLayoutPanel1.ResumeLayout( false );
             tableLayoutPanel1.PerformLayout();

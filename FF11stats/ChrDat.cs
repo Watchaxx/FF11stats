@@ -295,5 +295,8 @@
         public sbyte[] MovHomePoint { get; set; } = new sbyte[121];
         public sbyte[] MovMount { get; set; } = new sbyte[39];
         #endregion
+        #region アイテム
+        public SortedSet<ushort> SItems { get; set; } = new();
+        #endregion
     }
 }

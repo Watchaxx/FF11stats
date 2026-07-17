@@ -296,7 +296,7 @@
         public sbyte[] MovMount { get; set; } = new sbyte[39];
         #endregion
         #region アイテム
-        public SortedSet<ushort> SItems { get; set; } = new();
+        public HashSet<ushort> SItems { get; set; } = new();
         #endregion
     }
 }

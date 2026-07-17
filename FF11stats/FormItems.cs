@@ -1,6 +1,6 @@
 ﻿using static FF11stats.Program;
 
-namespace FF11Stats
+namespace FF11stats
 {
     public partial class FormItems : Form
     {
@@ -12,7 +12,7 @@ namespace FF11Stats
 
             const string mogSlip = "モグの預り帳";
             Dictionary<ushort, string> rd;
-            FF11stats.DisplayStrings ds = new();
+            DisplayStrings ds = new();
 
             switch( kind ) {
             case ItemKind.MogSlip01:
@@ -27,32 +27,38 @@ namespace FF11Stats
                 rd = ds.StorageSlip03;
                 Text = $"{mogSlip}【03】";
                 break;
+            case ItemKind.MogSlip04:
+                rd = ds.StorageSlip04;
+                Text = $"{mogSlip}【04】";
+                break;
+            case ItemKind.MogSlip05:
+                rd = ds.StorageSlip05;
+                Text = $"{mogSlip}【05】";
+                break;
             default:
                 throw new InvalidOperationException( "フォームの初期化エラー" );
             }
-            foreach( (KeyValuePair<ushort, string>, int) t in rd.Select( ( val, idx ) => (val, idx) ) ) {
+            flowLayoutPanel1.SuspendLayout();
+            foreach( var (kvp, idx) in rd.Select( ( val, idx ) => (val, idx) ) ) {
                 Lcb.Add( new() {
                     AutoSize = true,
-                    Checked = cd.SItems.Contains( t.Item1.Key ),
-                    Name = $"c{t.Item1.Key}",
+                    Checked = cd.SItems.Contains( kvp.Key ),
+                    Name = $"cb{kvp.Key}",
                     Size = new( 1, 19 ),
-                    TabIndex = t.Item2,
-                    Text = t.Item1.Value,
+                    TabIndex = idx,
+                    Tag = kvp.Key,
+                    Text = kvp.Value,
                     UseVisualStyleBackColor = true
                 } );
             }
             flowLayoutPanel1.Controls.AddRange( Lcb.ToArray() );
+            flowLayoutPanel1.ResumeLayout();
         }
 
         private void MenuClick( object? sender, EventArgs e )
         {
-            ToolStripItem i = (ToolStripItem)sender!;
-
-            foreach( CheckBox c in Lcb ) {
-                if( StrComp( c.Text, i.Text! ) is true ) {
-                    c.Select();
-                    break;
-                }
+            if( sender is ToolStripMenuItem ts && ts.Tag is CheckBox cb ) {
+                cb.Select();
             }
             return;
         }
@@ -87,7 +93,7 @@ namespace FF11Stats
 
             foreach( CheckBox c in Lcb ) {
                 if( c.Text.Contains( textBox1.Text, StringComparison.OrdinalIgnoreCase ) is true ) {
-                    tsi.Add( new( c.Text, null, MenuClick ) );
+                    tsi.Add( new( c.Text, null, MenuClick ) { Tag = c } );
                 }
             }
             if( tsi.Count is 0 ) {
@@ -103,10 +109,12 @@ namespace FF11Stats
         private void Button4_Click( object sender, EventArgs e )
         {
             foreach( CheckBox c in Lcb ) {
-                if( c.Checked is true ) {
-                    cd.SItems.Add( ushort.Parse( c.Name[1..] ) );
-                } else {
-                    cd.SItems.Remove( ushort.Parse( c.Name[1..] ) );
+                if( c.Tag is ushort id ) {
+                    if( c.Checked is true ) {
+                        cd.SItems.Add( id );
+                    } else {
+                        cd.SItems.Remove( id );
+                    }
                 }
             }
             Close();

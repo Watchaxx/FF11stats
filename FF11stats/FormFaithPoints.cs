@@ -1,6 +1,4 @@
-﻿using FF11stats;
-
-namespace FF11Stats
+﻿namespace FF11stats
 {
     public partial class FormFaithPoints : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace FF11Stats
+﻿namespace FF11stats
 {
     partial class FormFaithPoints
     {

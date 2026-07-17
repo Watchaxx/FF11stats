@@ -1,5 +1,4 @@
-﻿using FF11Stats;
-using System.Text.Json;
+﻿using System.Text.Json;
 using static FF11stats.Program;
 
 namespace FF11stats
@@ -21,6 +20,18 @@ namespace FF11stats
             }
             label1.Text = cd.Name;
 #if DEBUG
+            if( MessageBox.Show( "Itm chk?", "DBG", MessageBoxButtons.YesNo ) is DialogResult.Yes ) {
+                try {
+                    DisplayStrings ds = new();
+                    Dictionary<ushort, string> test = new( ds.StorageSlip01 );
+
+                    test = test.Concat( ds.StorageSlip02 ).Concat( ds.StorageSlip03 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip04 ).Concat( ds.StorageSlip05 ).ToDictionary();
+                } catch( ArgumentException ae ) {
+                    MessageBox.Show( ae.Message );
+                    Close();
+                }
+            }
             BackColor = Color.MediumPurple;
 #endif
             ResumeLayout();
@@ -164,6 +175,7 @@ namespace FF11stats
         {
             if( string.IsNullOrWhiteSpace( edit ) is false ) {
                 VerifyEmiCompNum();
+                cd.SItems = cd.SItems.OrderBy( x => x ).ToHashSet();
                 File.WriteAllBytes( edit, JsonSerializer.SerializeToUtf8Bytes( cd ) );
                 ChangeStatus( $"Save to {edit}" );
             } else {
@@ -180,6 +192,7 @@ namespace FF11stats
             sfd.Filter = "キャラクタ ファイル|*.chr";
             if( sfd.ShowDialog() is DialogResult.OK ) {
                 VerifyEmiCompNum();
+                cd.SItems = cd.SItems.OrderBy( x => x ).ToHashSet();
                 File.WriteAllBytes( sfd.FileName, JsonSerializer.SerializeToUtf8Bytes( cd ) );
                 edit = sfd.FileName;
                 SetTitle( sfd.FileName.Split( '\\' )[^1] );
@@ -408,6 +421,12 @@ namespace FF11stats
                 break;
             case "toolStripMenuItem200":
                 ShowForm( new FormItems( ItemKind.MogSlip03 ) );
+                break;
+            case "toolStripMenuItem201":
+                ShowForm( new FormItems( ItemKind.MogSlip04 ) );
+                break;
+            case "toolStripMenuItem202":
+                ShowForm( new FormItems( ItemKind.MogSlip05 ) );
                 break;
             //魔法
             case "toolStripMenuItem67":
@@ -651,6 +670,7 @@ namespace FF11stats
                     }
                 }
                 VerifyEmiCompNum();
+                cd.SItems = cd.SItems.OrderBy( x => x ).ToHashSet();
                 File.WriteAllBytes( p, JsonSerializer.SerializeToUtf8Bytes( cd ) );
                 break;
             case DialogResult.Cancel:

@@ -1,6 +1,6 @@
 ﻿using static FF11stats.Program;
 
-namespace FF11Stats
+namespace FF11stats
 {
     public partial class FormVanaClock : Form
     {

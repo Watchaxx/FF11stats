@@ -27,6 +27,8 @@ namespace FF11stats
 
                     test = test.Concat( ds.StorageSlip02 ).Concat( ds.StorageSlip03 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip04 ).Concat( ds.StorageSlip05 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip06 ).Concat( ds.StorageSlip07 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip08 ).Concat( ds.StorageSlip09 ).Concat( ds.StorageSlip10 ).ToDictionary();
                 } catch( ArgumentException ae ) {
                     MessageBox.Show( ae.Message );
                     Close();
@@ -414,19 +416,16 @@ namespace FF11stats
                 break;
             //装備
             case "toolStripMenuItem198":
-                ShowForm( new FormItems( ItemKind.MogSlip01 ) );
-                break;
             case "toolStripMenuItem199":
-                ShowForm( new FormItems( ItemKind.MogSlip02 ) );
-                break;
             case "toolStripMenuItem200":
-                ShowForm( new FormItems( ItemKind.MogSlip03 ) );
-                break;
             case "toolStripMenuItem201":
-                ShowForm( new FormItems( ItemKind.MogSlip04 ) );
-                break;
             case "toolStripMenuItem202":
-                ShowForm( new FormItems( ItemKind.MogSlip05 ) );
+            case "toolStripMenuItem203":
+            case "toolStripMenuItem204":
+            case "toolStripMenuItem205":
+            case "toolStripMenuItem206":
+            case "toolStripMenuItem207":
+                ShowForm( new FormItems( i.Name ) );
                 break;
             //魔法
             case "toolStripMenuItem67":
@@ -617,6 +616,8 @@ namespace FF11stats
             System.Text.StringBuilder sb = new();
 
             sb.AppendLine( "・スキルはログに表示される素の値を入力してください。" );
+            sb.AppendLine( "・[装備]内アイテム名の英数字記号は半角に統一しています。" );
+            sb.AppendLine( "　例：ＦＴマスク+1 → FTマスク+1" );
             sb.AppendLine( "・ファントムロールはアビリティですが，習得方法が似ているため魔法に分類しています。" );
             sb.AppendLine( "・エミネンス・レコードはコンプリート数に入る目標のみ掲載しています。" );
             sb.AppendLine( "・エミネンス・レコードの『コンテンツ：リンバス』について，リンバスのリニューアルに伴いゲーム内の目標から削除されましたが，コンプリート数には加算されるため残しています。" );

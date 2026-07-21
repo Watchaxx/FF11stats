@@ -9,11 +9,13 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyTitle>FF11stats</AssemblyTitle>
     <Company>(C) SQUARE ENIX</Company>
-    <FileVersion>5.5.1.30</FileVersion>
-    <InformationalVersion>5.5.1</InformationalVersion>
+    <FileVersion>5.5.2.31</FileVersion>
+    <InformationalVersion>5.5.2</InformationalVersion>
     <Product>FF11stats</Product>
     <Copyright>(C) 2015-2026 わっちゃ</Copyright>
     <Description>■更新履歴
+5.5.2 [add] 装備/モグの預り帳【06】～【10】
+  [fix] 内部処理の変更
 5.5.1 [add] 装備/モグの預り帳【04】【05】
   [fix] 内部処理の変更
 5.5.0 [add(試験的)] ステータス/戦闘スキルと魔法スキルに[含メリポ]

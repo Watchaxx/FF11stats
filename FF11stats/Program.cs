@@ -32,54 +32,6 @@
         internal static string sea = string.Empty;
         internal static ChrDat cd = new();
 
-        internal enum ItemKind
-        {
-            None,
-            Permanent,
-            Abyssea,
-            Voidwatch,
-            GeasFete,
-            Mounts,
-            MogGarden,
-            MagicalMaps,
-            ClaimSlips,
-            JobAttire,
-            EventNPC,
-            MogSlip01,
-            MogSlip02,
-            MogSlip03,
-            MogSlip04,
-            MogSlip05,
-            MogSlip06,
-            MogSlip07,
-            MogSlip08,
-            MogSlip09,
-            MogSlip10,
-            MogSlip11,
-            MogSlip12,
-            MogSlip13,
-            MogSlip14,
-            MogSlip15,
-            MogSlip16,
-            MogSlip17,
-            MogSlip18,
-            MogSlip19,
-            MogSlip20,
-            MogSlip21,
-            MogSlip22,
-            MogSlip23,
-            MogSlip24,
-            MogSlip25,
-            MogSlip26,
-            MogSlip27,
-            MogSlip28,
-            MogSlip29,
-            MogSlip30,
-            MogSlip31,
-            MogSlip32,
-            MogSlip33
-        }
-
         internal enum Jobs
         {
             War,

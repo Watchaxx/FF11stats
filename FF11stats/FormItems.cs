@@ -11,6 +11,7 @@ namespace FF11stats
             InitializeComponent();
 
             const string mogSlip = "モグの預り帳";
+            int az = 0;
             DisplayStrings ds = new();
             System.Collections.ObjectModel.ReadOnlyDictionary<ushort, string> rd;
 
@@ -59,14 +60,48 @@ namespace FF11stats
                 Text = $"{mogSlip}【10】";
                 textBox1.ImeMode = ImeMode.Off;
                 break;
+            case "toolStripMenuItem210":
+                rd = new( ds.StorageSlip13 );
+                Text = $"{mogSlip}【13】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem212":
+                rd = new( ds.StorageSlip15 );
+                Text = $"{mogSlip}【15】";
+                break;
+            case "toolStripMenuItem213":
+                rd = new( ds.StorageSlip16 );
+                Text = $"{mogSlip}【16】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem221":
+                rd = new( ds.StorageSlip24 );
+                Text = $"{mogSlip}【24】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem222":
+                rd = new( ds.StorageSlip25 );
+                Text = $"{mogSlip}【25】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem229":
+                rd = new( ds.StorageSlip32 );
+                Text = $"{mogSlip}【32】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
             default:
                 throw new InvalidOperationException( "フォームの初期化エラー" );
             }
             flowLayoutPanel1.SuspendLayout();
             foreach( var (kvp, idx) in rd.Select( ( val, idx ) => (val, idx) ) ) {
+                bool con = cd.SItems.Contains( kvp.Key );
+
+                if( con is true ) {
+                    az++;
+                }
                 Lcb.Add( new() {
                     AutoSize = true,
-                    Checked = cd.SItems.Contains( kvp.Key ),
+                    Checked = con,
                     Name = $"cb{kvp.Key}",
                     Size = new( 1, 19 ),
                     TabIndex = idx,
@@ -77,6 +112,7 @@ namespace FF11stats
             }
             flowLayoutPanel1.Controls.AddRange( Lcb.ToArray() );
             flowLayoutPanel1.ResumeLayout();
+            label1.Text = $"預け数：{az}";
         }
 
         private void AllCheck()

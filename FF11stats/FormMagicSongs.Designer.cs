@@ -144,6 +144,7 @@
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
+            ma0388 = new CheckBox();
             menuStrip1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -338,6 +339,7 @@
             tableLayoutPanel1.Controls.Add( ma0876, 1, 45 );
             tableLayoutPanel1.Controls.Add( ma0877, 1, 46 );
             tableLayoutPanel1.Controls.Add( ma0878, 1, 47 );
+            tableLayoutPanel1.Controls.Add( ma0388, 2, 3 );
             tableLayoutPanel1.Location = new Point( 12, 27 );
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 57;
@@ -1453,6 +1455,16 @@
             label1.TabIndex = 4;
             label1.Text = "label1";
             // 
+            // ma0388
+            // 
+            ma0388.AutoSize = true;
+            ma0388.Location = new Point( 267, 78 );
+            ma0388.Name = "ma0388";
+            ma0388.Size = new Size( 115, 19 );
+            ma0388.TabIndex = 102;
+            ma0388.Text = "魔道士のバラードIII";
+            ma0388.UseVisualStyleBackColor = true;
+            // 
             // FormMagicSongs
             // 
             AcceptButton = button1;
@@ -1596,5 +1608,6 @@
         private Button button1;
         private Button button2;
         private Label label1;
+        private CheckBox ma0388;
     }
 }

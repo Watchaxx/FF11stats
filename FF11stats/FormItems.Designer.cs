@@ -46,6 +46,7 @@
             toolStripMenuItem7 = new ToolStripMenuItem();
             toolStripMenuItem3 = new ToolStripMenuItem();
             toolStripMenuItem8 = new ToolStripMenuItem();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -205,6 +206,15 @@
             toolStripMenuItem8.Text = "預けたアイテムを隠す(&H)";
             toolStripMenuItem8.Click +=  ToolStripMenuItem8_Click ;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point( 381, 461 );
+            label1.Name = "label1";
+            label1.Size = new Size( 70, 15 );
+            label1.TabIndex = 8;
+            label1.Text = "預け数：888";
+            // 
             // FormItems
             // 
             AcceptButton = button4;
@@ -212,6 +222,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = button5;
             ClientSize = new Size( 784, 492 );
+            Controls.Add( label1 );
             Controls.Add( menuStrip1 );
             Controls.Add( button5 );
             Controls.Add( button4 );
@@ -252,5 +263,6 @@
         private ToolStripMenuItem toolStripMenuItem7;
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem toolStripMenuItem8;
+        private Label label1;
     }
 }

@@ -29,6 +29,9 @@ namespace FF11stats
                     test = test.Concat( ds.StorageSlip04 ).Concat( ds.StorageSlip05 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip06 ).Concat( ds.StorageSlip07 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip08 ).Concat( ds.StorageSlip09 ).Concat( ds.StorageSlip10 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip13 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip15 ).Concat( ds.StorageSlip16 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip24 ).Concat( ds.StorageSlip25 ).Concat( ds.StorageSlip32 ).ToDictionary();
                 } catch( ArgumentException ae ) {
                     MessageBox.Show( ae.Message );
                     Close();
@@ -425,7 +428,16 @@ namespace FF11stats
             case "toolStripMenuItem205":
             case "toolStripMenuItem206":
             case "toolStripMenuItem207":
+            case "toolStripMenuItem210":
+            case "toolStripMenuItem212":
+            case "toolStripMenuItem213":
+            case "toolStripMenuItem221":
+            case "toolStripMenuItem222":
+            case "toolStripMenuItem229":
                 ShowForm( new FormItems( i.Name ) );
+                break;
+            case "toolStripMenuItem231":
+                ShowForm( new FormJobSpecificEq() );
                 break;
             //魔法
             case "toolStripMenuItem67":

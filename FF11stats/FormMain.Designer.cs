@@ -284,6 +284,8 @@
             toolStripMenuItem228 = new ToolStripMenuItem();
             toolStripMenuItem229 = new ToolStripMenuItem();
             toolStripMenuItem230 = new ToolStripMenuItem();
+            toolStripSeparator4 = new ToolStripSeparator();
+            toolStripMenuItem231 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             contextMenuStrip4.SuspendLayout();
@@ -382,7 +384,7 @@
             // toolStripMenuItem8
             // 
             toolStripMenuItem8.Name = "toolStripMenuItem8";
-            toolStripMenuItem8.Size = new Size( 138, 22 );
+            toolStripMenuItem8.Size = new Size( 149, 22 );
             toolStripMenuItem8.Text = "ヴァナクロック(&C)";
             toolStripMenuItem8.Click +=  ToolStripMenuItem8_Click ;
             // 
@@ -484,7 +486,7 @@
             button4.Name = "button4";
             button4.Size = new Size( 150, 23 );
             button4.TabIndex = 4;
-            button4.Text = "魔法(&A)";
+            button4.Text = "魔法(&M)";
             button4.UseVisualStyleBackColor = true;
             button4.Click +=  Button1_Click ;
             // 
@@ -1843,9 +1845,9 @@
             // 
             // contextMenuStrip10
             // 
-            contextMenuStrip10.Items.AddRange( new ToolStripItem[] { toolStripMenuItem185, toolStripMenuItem186, toolStripMenuItem187, toolStripMenuItem188, toolStripMenuItem189 } );
+            contextMenuStrip10.Items.AddRange( new ToolStripItem[] { toolStripMenuItem185, toolStripMenuItem186, toolStripMenuItem187, toolStripMenuItem188, toolStripMenuItem189, toolStripSeparator4, toolStripMenuItem231 } );
             contextMenuStrip10.Name = "contextMenuStrip10";
-            contextMenuStrip10.Size = new Size( 195, 136 );
+            contextMenuStrip10.Size = new Size( 195, 142 );
             // 
             // toolStripMenuItem185
             // 
@@ -2146,6 +2148,18 @@
             toolStripMenuItem230.ToolTipText = "レリックItemLevel:119+4";
             toolStripMenuItem230.Click +=  ToolStripMenuItem12_Click ;
             // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size( 191, 6 );
+            // 
+            // toolStripMenuItem231
+            // 
+            toolStripMenuItem231.Name = "toolStripMenuItem231";
+            toolStripMenuItem231.Size = new Size( 194, 22 );
+            toolStripMenuItem231.Text = "ジョブ専用装束状況(&S)";
+            toolStripMenuItem231.Click +=  ToolStripMenuItem12_Click ;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF( 7F, 15F );
@@ -2440,5 +2454,7 @@
         private ToolStripMenuItem toolStripMenuItem228;
         private ToolStripMenuItem toolStripMenuItem229;
         private ToolStripMenuItem toolStripMenuItem230;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripMenuItem toolStripMenuItem231;
     }
 }

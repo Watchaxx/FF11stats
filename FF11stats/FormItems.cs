@@ -74,6 +74,16 @@ namespace FF11stats
                 Text = $"{mogSlip}【16】";
                 textBox1.ImeMode = ImeMode.Off;
                 break;
+            case "toolStripMenuItem214":
+                rd = new( ds.StorageSlip17 );
+                Text = $"{mogSlip}【17】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem215":
+                rd = new( ds.StorageSlip18 );
+                Text = $"{mogSlip}【18】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
             case "toolStripMenuItem221":
                 rd = new( ds.StorageSlip24 );
                 Text = $"{mogSlip}【24】";
@@ -84,9 +94,24 @@ namespace FF11stats
                 Text = $"{mogSlip}【25】";
                 textBox1.ImeMode = ImeMode.Off;
                 break;
+            case "toolStripMenuItem223":
+                rd = new( ds.StorageSlip26 );
+                Text = $"{mogSlip}【26】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem224":
+                rd = new( ds.StorageSlip27 );
+                Text = $"{mogSlip}【27】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
             case "toolStripMenuItem229":
                 rd = new( ds.StorageSlip32 );
                 Text = $"{mogSlip}【32】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem230":
+                rd = new( ds.StorageSlip33 );
+                Text = $"{mogSlip}【33】";
                 textBox1.ImeMode = ImeMode.Off;
                 break;
             default:

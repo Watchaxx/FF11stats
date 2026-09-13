@@ -9,11 +9,13 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyTitle>FF11stats</AssemblyTitle>
     <Company>(C) SQUARE ENIX</Company>
-    <FileVersion>5.5.3.32</FileVersion>
-    <InformationalVersion>5.5.3</InformationalVersion>
+    <FileVersion>5.5.4.33</FileVersion>
+    <InformationalVersion>5.5.4</InformationalVersion>
     <Product>FF11stats</Product>
     <Copyright>(C) 2015-2026 わっちゃ</Copyright>
     <Description>■更新履歴
+5.5.4 [add] 装備/モグの預り帳【17】【18】【26】【27】【33】
+  [fix] フェイスポイントの上限60
 5.5.3 [add] 装備/モグの預り帳【13】【15】【16】【24】【25】【32】
   [add] 装備/ジョブ専用装束の預け状況
   [fix] 魔法/歌に魔道士のバラードIIIが無い

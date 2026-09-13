@@ -45,7 +45,7 @@
                 }, 0, i );
                 tableLayoutPanel1.Controls.Add( new NumericUpDown() {
                     Location = new( 30, 30 ),
-                    Maximum = 50,
+                    Maximum = 60,
                     Minimum = 0,
                     Name = $"n{i}",
                     Size = new( 60, 23 ),

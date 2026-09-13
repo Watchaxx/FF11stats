@@ -31,7 +31,9 @@ namespace FF11stats
                     test = test.Concat( ds.StorageSlip08 ).Concat( ds.StorageSlip09 ).Concat( ds.StorageSlip10 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip13 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip15 ).Concat( ds.StorageSlip16 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip17 ).Concat( ds.StorageSlip18 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip24 ).Concat( ds.StorageSlip25 ).Concat( ds.StorageSlip32 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip26 ).Concat( ds.StorageSlip27 ).Concat( ds.StorageSlip33 ).ToDictionary();
                 } catch( ArgumentException ae ) {
                     MessageBox.Show( ae.Message );
                     Close();
@@ -64,7 +66,7 @@ namespace FF11stats
 
         private void ShowForm( Form form, bool wait = false )
         {
-            Cursor = wait ? Cursors.AppStarting : Cursors.Default;
+            Cursor = wait ? new( Resource1.loading.GetHicon() ) : Cursors.Default;
             form.ShowDialog();
             form?.Dispose();
             Cursor = Cursors.Default;
@@ -229,7 +231,7 @@ namespace FF11stats
 
         private void ToolStripMenuItem11_Click( object sender, EventArgs e )
         {
-            Cursor = Cursors.AppStarting;
+            Cursor = new( Resource1.loading.GetHicon() );
             using( FormProfile f = new() ) {
                 if( f.ShowDialog() == DialogResult.OK ) {
                     label1.Text = cd.Name;
@@ -418,7 +420,7 @@ namespace FF11stats
                 ShowForm( new FormFaithPoints( i ) );
                 break;
             //装備
-            case "toolStripMenuItem198":
+            case "toolStripMenuItem198":    //預01
             case "toolStripMenuItem199":
             case "toolStripMenuItem200":
             case "toolStripMenuItem201":
@@ -428,12 +430,29 @@ namespace FF11stats
             case "toolStripMenuItem205":
             case "toolStripMenuItem206":
             case "toolStripMenuItem207":
+            // case "toolStripMenuItem208": //預11
+            // case "toolStripMenuItem209":
             case "toolStripMenuItem210":
+            // case "toolStripMenuItem211":
             case "toolStripMenuItem212":
             case "toolStripMenuItem213":
+            case "toolStripMenuItem214":
+            case "toolStripMenuItem215":
+            // case "toolStripMenuItem216":
+            // case "toolStripMenuItem217":
+            // case "toolStripMenuItem218": //預21
+            // case "toolStripMenuItem219":
+            // case "toolStripMenuItem220":
             case "toolStripMenuItem221":
             case "toolStripMenuItem222":
+            case "toolStripMenuItem223":
+            case "toolStripMenuItem224":
+            // case "toolStripMenuItem225":
+            // case "toolStripMenuItem226":
+            // case "toolStripMenuItem227":
+            // case "toolStripMenuItem228": //預31
             case "toolStripMenuItem229":
+            case "toolStripMenuItem230":
                 ShowForm( new FormItems( i.Name ) );
                 break;
             case "toolStripMenuItem231":

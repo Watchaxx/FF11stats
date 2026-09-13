@@ -60,7 +60,7 @@ namespace FF11stats
                 key7 = key7.Except( ex ).ToArray();
             }
             foreach( int i in Enumerable.Range( 0, 5 * 22 ) ) {
-                itm[i] = new ushort[] { key1[i], key2[i], key3[i], key4[i], key5[i], key6[i], key7[i] };
+                itm[i] = [key1[i], key2[i], key3[i], key4[i], key5[i], key6[i], key7[i]];
             }
             tableLayoutPanel1.SuspendLayout();
             foreach( int i in Enumerable.Range( 0, itm.Length ) ) {

@@ -60,6 +60,11 @@ namespace FF11stats
                 Text = $"{mogSlip}【10】";
                 textBox1.ImeMode = ImeMode.Off;
                 break;
+            case "toolStripMenuItem209":
+                rd = new( ds.StorageSlip12 );
+                Text = $"{mogSlip}【12】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
             case "toolStripMenuItem210":
                 rd = new( ds.StorageSlip13 );
                 Text = $"{mogSlip}【13】";
@@ -77,11 +82,19 @@ namespace FF11stats
             case "toolStripMenuItem214":
                 rd = new( ds.StorageSlip17 );
                 Text = $"{mogSlip}【17】";
-                textBox1.ImeMode = ImeMode.Off;
                 break;
             case "toolStripMenuItem215":
                 rd = new( ds.StorageSlip18 );
                 Text = $"{mogSlip}【18】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem217":
+                rd = new( ds.StorageSlip20 );
+                Text = $"{mogSlip}【20】";
+                break;
+            case "toolStripMenuItem218":
+                rd = new( ds.StorageSlip21 );
+                Text = $"{mogSlip}【21】";
                 textBox1.ImeMode = ImeMode.Off;
                 break;
             case "toolStripMenuItem221":
@@ -102,6 +115,16 @@ namespace FF11stats
             case "toolStripMenuItem224":
                 rd = new( ds.StorageSlip27 );
                 Text = $"{mogSlip}【27】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem226":
+                rd = new( ds.StorageSlip29 );
+                Text = $"{mogSlip}【29】";
+                textBox1.ImeMode = ImeMode.Off;
+                break;
+            case "toolStripMenuItem227":
+                rd = new( ds.StorageSlip30 );
+                Text = $"{mogSlip}【30】";
                 textBox1.ImeMode = ImeMode.Off;
                 break;
             case "toolStripMenuItem229":

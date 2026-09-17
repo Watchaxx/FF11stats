@@ -29,11 +29,13 @@ namespace FF11stats
                     test = test.Concat( ds.StorageSlip04 ).Concat( ds.StorageSlip05 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip06 ).Concat( ds.StorageSlip07 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip08 ).Concat( ds.StorageSlip09 ).Concat( ds.StorageSlip10 ).ToDictionary();
-                    test = test.Concat( ds.StorageSlip13 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip12 ).Concat( ds.StorageSlip13 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip15 ).Concat( ds.StorageSlip16 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip17 ).Concat( ds.StorageSlip18 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip20 ).Concat( ds.StorageSlip21 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip24 ).Concat( ds.StorageSlip25 ).Concat( ds.StorageSlip32 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip26 ).Concat( ds.StorageSlip27 ).Concat( ds.StorageSlip33 ).ToDictionary();
+                    test = test.Concat( ds.StorageSlip29 ).Concat( ds.StorageSlip30 ).ToDictionary();
                 } catch( ArgumentException ae ) {
                     MessageBox.Show( ae.Message );
                     Close();
@@ -431,7 +433,7 @@ namespace FF11stats
             case "toolStripMenuItem206":
             case "toolStripMenuItem207":
             // case "toolStripMenuItem208": //預11
-            // case "toolStripMenuItem209":
+            case "toolStripMenuItem209":
             case "toolStripMenuItem210":
             // case "toolStripMenuItem211":
             case "toolStripMenuItem212":
@@ -439,8 +441,8 @@ namespace FF11stats
             case "toolStripMenuItem214":
             case "toolStripMenuItem215":
             // case "toolStripMenuItem216":
-            // case "toolStripMenuItem217":
-            // case "toolStripMenuItem218": //預21
+            case "toolStripMenuItem217":
+            case "toolStripMenuItem218": //預21
             // case "toolStripMenuItem219":
             // case "toolStripMenuItem220":
             case "toolStripMenuItem221":
@@ -448,8 +450,8 @@ namespace FF11stats
             case "toolStripMenuItem223":
             case "toolStripMenuItem224":
             // case "toolStripMenuItem225":
-            // case "toolStripMenuItem226":
-            // case "toolStripMenuItem227":
+            case "toolStripMenuItem226":
+            case "toolStripMenuItem227":
             // case "toolStripMenuItem228": //預31
             case "toolStripMenuItem229":
             case "toolStripMenuItem230":

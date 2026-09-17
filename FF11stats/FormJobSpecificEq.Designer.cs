@@ -534,8 +534,7 @@
             Name = "FormJobSpecificEq";
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "ジョブ専用装束預け状況 ●データ ロード中…●";
-            Shown +=  FormJobSpecificEq_Shown ;
+            Text = "ジョブ専用装束預け状況";
             tableLayoutPanel1.ResumeLayout( false );
             tableLayoutPanel1.PerformLayout();
             ResumeLayout( false );

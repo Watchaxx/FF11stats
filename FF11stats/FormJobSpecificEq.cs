@@ -7,12 +7,9 @@ namespace FF11stats
         public FormJobSpecificEq()
         {
             InitializeComponent();
-        }
 
-        private void FormJobSpecificEq_Shown( object sender, EventArgs e )
-        {
             int idx = 41;
-            string[] disp = ["AF119+4", "AF119+3", "AF119+2", "AF119", "AF109", "AF+1", "AF"];
+            string[] disp = ["119+4", "119+3", "119+2", "119", "109", "+1", "AF"];
             DisplayStrings ds = new();
             ushort[] key1 = ds.StorageSlip32.Keys.ToArray();
             ushort[] key2 = ds.StorageSlip25.Keys.ToArray();
@@ -75,9 +72,64 @@ namespace FF11stats
                 }, i % 5 + 1, i / 5 + 2 );
                 idx++;
             }
+            key1 = ds.StorageSlip33.Keys.ToArray();
+            key2 = ds.StorageSlip27.Keys.ToArray();
+            key3 = ds.StorageSlip26.Keys.ToArray();
+            key4 = ds.StorageSlip18.Keys.ToArray();
+            key5 = ds.StorageSlip17.Keys.ToArray();
+            key6 = ds.StorageSlip13.Keys.Concat( pad ).ToArray();
+            key7 = ds.StorageSlip07.Keys.Concat( pad ).ToArray();
+
+            ushort[] exc = [15871, 15478, 15872, 15874, 15873, 15480, 15481, 15479, 15875, 15482,
+                15876, 15879, 15877, 15878, 15484, 16244, 15920, 16245, 16248, 15925];
+            ushort[] key8 = ds.StorageSlip06.Keys.Except( exc ).Concat( pad ).ToArray();
+
+            disp = ["119+4", "119+3", "119+2", "119", "109", "+2", "+1", "レリック"];
+            foreach( int i in Enumerable.Range( 0, 5 * 22 ) ) {
+                itm[i] = [key1[i], key2[i], key3[i], key4[i], key5[i], key6[i], key7[i], key8[i]];
+            }
+            foreach( int i in Enumerable.Range( 0, itm.Length ) ) {
+                int f = Array.FindIndex( itm[i], cd.SItems.Contains );
+
+                tableLayoutPanel1.Controls.Add( new Label() {
+                    AutoSize = true,
+                    Name = $"label{idx}",
+                    Size = new( 1, 15 ),
+                    TabIndex = idx - 1,
+                    Text = 0 <= f ? disp[f] : "(無し)"
+                }, i % 5 + 6, i / 5 + 2 );
+                idx++;
+            }
+            exc = [11591, 19253, 11592, 19254, 11615, 11554, 11593, 16203, 11594, 16204,
+                11736, 19260, 11595, 11750, 11616, 11737, 11617, 11555, 11618, 11738,
+                11596, 16205, 11597, 16206, 11598, 16207, 11599, 16208, 11619, 11739,
+                11600, 19255, 11601, 16209, 11602, 11751, 11603, 19256, 11620, 19247,
+                11703, 11704, 11705, 11706, 11707, 11708, 11709, 11710, 11711, 11712,
+                11713, 11714, 11715, 11716, 11717, 11718, 11719, 11720, 11721, 11722];
+            key1 = ds.StorageSlip30.Keys.ToArray();
+            key2 = ds.StorageSlip29.Keys.ToArray();
+            key3 = ds.StorageSlip21.Keys.ToArray();
+            key4 = ds.StorageSlip20.Keys.ToArray();
+            key5 = ds.StorageSlip10.Keys.Concat( pad ).ToArray();
+            key6 = ds.StorageSlip09.Keys.Concat( pad ).ToArray();
+            key7 = ds.StorageSlip08.Keys.Except( exc ).Concat( pad ).ToArray();
+            disp = ["119+3", "119+2", "119", "109", "+2", "+1", "エンピ"];
+            foreach( int i in Enumerable.Range( 0, 5 * 22 ) ) {
+                itm[i] = [key1[i], key2[i], key3[i], key4[i], key5[i], key6[i], key7[i]];
+            }
+            foreach( int i in Enumerable.Range( 0, itm.Length ) ) {
+                int f = Array.FindIndex( itm[i], cd.SItems.Contains );
+
+                tableLayoutPanel1.Controls.Add( new Label() {
+                    AutoSize = true,
+                    Name = $"label{idx}",
+                    Size = new( 1, 15 ),
+                    TabIndex = idx - 1,
+                    Text = 0 <= f ? disp[f] : "(無し)"
+                }, i % 5 + 11, i / 5 + 2 );
+                idx++;
+            }
             tableLayoutPanel1.ResumeLayout();
-            Text = "ジョブ専用装束預け状況";
-            return;
         }
     }
 }

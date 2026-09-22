@@ -9,11 +9,13 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyTitle>FF11stats</AssemblyTitle>
     <Company>(C) SQUARE ENIX</Company>
-    <FileVersion>5.5.5.34</FileVersion>
-    <InformationalVersion>5.5.5</InformationalVersion>
+    <FileVersion>5.5.6.35</FileVersion>
+    <InformationalVersion>5.5.6</InformationalVersion>
     <Product>FF11stats</Product>
     <Copyright>(C) 2015-2026 わっちゃ</Copyright>
     <Description>■更新履歴
+5.5.6 [add] 装備/モグの預り帳【11】【14】【19】【22】【23】【28】【31】
+  [fix] アイテム名の誤記
 5.5.5 [add] 装備/モグの預り帳【12】【20】【21】【29】【30】
 5.5.4 [add] 装備/モグの預り帳【17】【18】【26】【27】【33】
   [fix] フェイスポイントの上限60

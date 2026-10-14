@@ -41,6 +41,7 @@ namespace FF11stats
                     test = test.Concat( ds.StorageSlip26 ).Concat( ds.StorageSlip27 ).Concat( ds.StorageSlip33 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip28 ).Concat( ds.StorageSlip31 ).ToDictionary();
                     test = test.Concat( ds.StorageSlip29 ).Concat( ds.StorageSlip30 ).ToDictionary();
+                    test = test.Concat( ds.EventItemNPC ).ToDictionary();
                 } catch( ArgumentException ae ) {
                     MessageBox.Show( ae.Message );
                     Close();
@@ -427,6 +428,7 @@ namespace FF11stats
                 ShowForm( new FormFaithPoints( i ) );
                 break;
             //装備
+            case "toolStripMenuItem185":
             case "toolStripMenuItem198":    //預01
             case "toolStripMenuItem199":
             case "toolStripMenuItem200":
@@ -656,6 +658,7 @@ namespace FF11stats
             sb.AppendLine( "・スキルはログに表示される素の値を入力してください。" );
             sb.AppendLine( "・[装備]内アイテム名の英数字記号は半角に統一しています。" );
             sb.AppendLine( "　例：ＦＴマスク+1 → FTマスク+1" );
+            sb.AppendLine( "・イベントアイテム保管とモグの預り帳の両方に預けられるアイテムは，モグの預り帳のみとしています。" );
             sb.AppendLine( "・ファントムロールはアビリティですが，習得方法が似ているため魔法に分類しています。" );
             sb.AppendLine( "・エミネンス・レコードはコンプリート数に入る目標のみ掲載しています。" );
             sb.AppendLine( "・エミネンス・レコードの『コンテンツ：リンバス』について，リンバスのリニューアルに伴いゲーム内の目標から削除されましたが，コンプリート数には加算されるため残しています。" );

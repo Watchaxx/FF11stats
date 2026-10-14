@@ -16,6 +16,10 @@ namespace FF11stats
             System.Collections.ObjectModel.ReadOnlyDictionary<ushort, string> rd;
 
             switch( kind ) {
+            case "toolStripMenuItem185":
+                rd = new( ds.EventItemNPC );
+                Text = "イベントアイテム保管";
+                break;
             case "toolStripMenuItem198":
                 rd = new( ds.StorageSlip01 );
                 Text = $"{mogSlip}【01】";

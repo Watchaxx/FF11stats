@@ -8,6 +8,10 @@ namespace FF11stats
         {
             InitializeComponent();
 
+            byte[] mlv = [cd.MstlvlWar, cd.MstlvlMnk, cd.MstlvlWhm, cd.MstlvlBlm,
+                cd.MstlvlRdm, cd.MstlvlThf, cd.MstlvlPld, cd.MstlvlDrk, cd.MstlvlBst, cd.MstlvlBrd,
+                cd.MstlvlRng, cd.MstlvlSam, cd.MstlvlNin, cd.MstlvlDrg, cd.MstlvlSmn, cd.MstlvlBlu,
+                cd.MstlvlCor, cd.MstlvlPup, cd.MstlvlDnc, cd.MstlvlSch, cd.MstlvlGeo, cd.MstlvlRun];
             decimal[] cap = [424m, 417m];
 
             foreach( Control c in tableLayoutPanel1.Controls ) {
@@ -17,45 +21,47 @@ namespace FF11stats
                     n.Maximum = cap[0];
                 }
             }
-            numericUpDown1.Maximum += Math.Max( cd.MstlvlMnk, cd.MstlvlPup );
+            numericUpDown1.Maximum += GetMax( mlv[0], mlv[1], mlv[5], mlv[12], mlv[17], mlv[18] );
             numericUpDown1.Value = cd.SkillHand;
-            numericUpDown2.Maximum += Math.Max( cd.MstlvlThf, cd.MstlvlDnc );
+            numericUpDown2.Maximum += GetMax( mlv[0], mlv[3], mlv[4], mlv[5], mlv[6], mlv[7], mlv[8], mlv[9], mlv[10], mlv[11], mlv[12], mlv[13], mlv[14], mlv[16], mlv[17], mlv[18], mlv[19], mlv[20] );
             numericUpDown2.Value = cd.SkillDagger;
-            numericUpDown3.Maximum += Math.Max( cd.MstlvlPld, cd.MstlvlBlu );
+            numericUpDown3.Maximum += GetMax( mlv[0], mlv[4], mlv[5], mlv[6], mlv[7], mlv[8], mlv[9], mlv[10], mlv[11], mlv[12], mlv[13], mlv[15], mlv[16], mlv[18], mlv[21] );
             numericUpDown3.Value = cd.SkillKsword;
-            numericUpDown4.Maximum += cd.MstlvlRun;
+            numericUpDown4.Maximum += GetMax( mlv[0], mlv[6], mlv[7], mlv[21] );
             numericUpDown4.Value = cd.SkillRsword;
-            numericUpDown5.Maximum += cd.MstlvlBst;
+            numericUpDown5.Maximum += GetMax( mlv[0], mlv[7], mlv[8], mlv[10], mlv[21] );
             numericUpDown5.Value = cd.SkillKaxe;
-            numericUpDown6.Maximum += cd.MstlvlWar;
+            numericUpDown6.Maximum += GetMax( mlv[0], mlv[7], mlv[21] );
             numericUpDown6.Value = cd.SkillRaxe;
-            numericUpDown7.Maximum += cd.MstlvlDrk;
+            numericUpDown7.Maximum += GetMax( mlv[0], mlv[3], mlv[7], mlv[8] );
             numericUpDown7.Value = cd.SkillRscythe;
-            numericUpDown8.Maximum += cd.MstlvlDrg;
+            numericUpDown8.Maximum += GetMax( mlv[0], mlv[6], mlv[11], mlv[13] );
             numericUpDown8.Value = cd.SkillRpolearm;
-            numericUpDown9.Maximum += cd.MstlvlNin;
+            numericUpDown9.Maximum += GetMax( mlv[12] );
             numericUpDown9.Value = cd.SkillKkatana;
-            numericUpDown10.Maximum += cd.MstlvlSam;
+            numericUpDown10.Maximum += GetMax( mlv[11], mlv[12] );
             numericUpDown10.Value = cd.SkillRkatana;
-            numericUpDown11.Maximum = cap[1] + cd.MstlvlPld;
+            numericUpDown11.Maximum = cap[1] + GetMax( mlv[0], mlv[1], mlv[2], mlv[3], mlv[4], mlv[5], mlv[6], mlv[7], mlv[8], mlv[9], mlv[10], mlv[11], mlv[12], mlv[13], mlv[14], mlv[15], mlv[17], mlv[19], mlv[20], mlv[21] );
             numericUpDown11.Value = cd.SkillKclub;
-            numericUpDown12.Maximum = cap[1] + cd.MstlvlPld;
+            numericUpDown12.Maximum = cap[1] + GetMax( mlv[0], mlv[1], mlv[2], mlv[3], mlv[6], mlv[9], mlv[13], mlv[14], mlv[19], mlv[20] );
             numericUpDown12.Value = cd.SkillRclub;
-            numericUpDown13.Maximum += cd.MstlvlRng;
+            numericUpDown13.Maximum += GetMax( mlv[0], mlv[4], mlv[5], mlv[10], mlv[11], mlv[12] );
             numericUpDown13.Value = cd.SkillArchery;
-            numericUpDown14.Maximum += cd.MstlvlRng;
+            numericUpDown14.Maximum += GetMax( mlv[0], mlv[5], mlv[7], mlv[10], mlv[12], mlv[16] );
             numericUpDown14.Value = cd.SkillMarksman;
-            numericUpDown15.Maximum += cd.MstlvlNin;
+            numericUpDown15.Maximum += GetMax( mlv[0], mlv[1], mlv[2], mlv[3], mlv[4], mlv[5], mlv[9], mlv[10], mlv[11], mlv[12], mlv[16], mlv[17], mlv[18], mlv[19] );
             numericUpDown15.Value = cd.SkillThrow;
-            numericUpDown16.Maximum = cap[1] + cd.MstlvlMnk;
+            numericUpDown16.Maximum = cap[1] + GetMax( mlv[1], mlv[17] );
             numericUpDown16.Value = cd.SkillGuard;
-            numericUpDown17.Maximum += cd.MstlvlThf;
+            numericUpDown17.Maximum += GetMax( mlv );
             numericUpDown17.Value = cd.SkillEvasion;
-            numericUpDown18.Maximum += cd.MstlvlPld;
+            numericUpDown18.Maximum += GetMax( mlv[0], mlv[2], mlv[4], mlv[5], mlv[6], mlv[8] );
             numericUpDown18.Value = cd.SkillShield;
-            numericUpDown19.Maximum += cd.MstlvlRun;
+            numericUpDown19.Maximum += GetMax( mlv[0], mlv[1], mlv[4], mlv[5], mlv[6], mlv[7], mlv[8], mlv[9], mlv[11], mlv[12], mlv[13], mlv[15], mlv[16], mlv[17], mlv[18], mlv[19], mlv[20], mlv[21] );
             numericUpDown19.Value = cd.SkillParry;
         }
+
+        private static decimal GetMax( params byte[] mlv ) => (decimal)mlv.Max();
 
         private void Button1_Click( object sender, EventArgs e )
         {

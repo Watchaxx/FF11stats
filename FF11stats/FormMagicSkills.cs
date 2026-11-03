@@ -20,22 +20,27 @@ namespace FF11stats
         {
             InitializeComponent();
 
+            byte[] mlv = [cd.MstlvlWar, cd.MstlvlMnk, cd.MstlvlWhm, cd.MstlvlBlm,
+                cd.MstlvlRdm, cd.MstlvlThf, cd.MstlvlPld, cd.MstlvlDrk, cd.MstlvlBst, cd.MstlvlBrd,
+                cd.MstlvlRng, cd.MstlvlSam, cd.MstlvlNin, cd.MstlvlDrg, cd.MstlvlSmn, cd.MstlvlBlu,
+                cd.MstlvlCor, cd.MstlvlPup, cd.MstlvlDnc, cd.MstlvlSch, cd.MstlvlGeo, cd.MstlvlRun];
+
             foreach( Control c in tableLayoutPanel1.Controls ) {
                 if( c is Label l ) {
                     l.Anchor = AnchorStyles.Left;
                 }
             }
-            numericUpDown1.Maximum = ToDecimal( Cap.A2 ) + cd.MstlvlWhm;
+            numericUpDown1.Maximum = ToDecimal( Cap.A2 ) + GetMax( mlv[2], mlv[4], mlv[6], mlv[19], mlv[21] );
             numericUpDown1.Value = cd.SkillDivine;
-            numericUpDown2.Maximum = ToDecimal( Cap.A1 ) + cd.MstlvlWhm;
+            numericUpDown2.Maximum = ToDecimal( Cap.A1 ) + GetMax( mlv[2], mlv[4], mlv[6], mlv[19] );
             numericUpDown2.Value = cd.SkillHealing;
-            numericUpDown3.Maximum = ToDecimal( Cap.B1 ) + cd.MstlvlRdm;
+            numericUpDown3.Maximum = ToDecimal( Cap.B1 ) + GetMax( mlv[2], mlv[3], mlv[4], mlv[6], mlv[19], mlv[21] );
             numericUpDown3.Value = cd.SkillEnhancing;
-            numericUpDown4.Maximum = ToDecimal( Cap.A1 ) + cd.MstlvlRdm;
+            numericUpDown4.Maximum = ToDecimal( Cap.A1 ) + GetMax( mlv[2], mlv[3], mlv[4], mlv[7], mlv[19], mlv[20] );
             numericUpDown4.Value = cd.SkillEnfeebling;
-            numericUpDown5.Maximum = ToDecimal( Cap.A1 ) + cd.MstlvlBlm;
+            numericUpDown5.Maximum = ToDecimal( Cap.A1 ) + GetMax( mlv[3], mlv[4], mlv[7], mlv[19], mlv[20] );
             numericUpDown5.Value = cd.SkillElemental;
-            numericUpDown6.Maximum = ToDecimal( Cap.A2 ) + Math.Max( cd.MstlvlBlm, cd.MstlvlDrk );
+            numericUpDown6.Maximum = ToDecimal( Cap.A2 ) + GetMax( mlv[3], mlv[4], mlv[7], mlv[19], mlv[20] );
             numericUpDown6.Value = cd.SkillDark;
             numericUpDown7.Maximum = ToDecimal( Cap.A2 ) + cd.MstlvlSmn;
             numericUpDown7.Value = cd.SkillSummoning;
@@ -54,6 +59,8 @@ namespace FF11stats
             numericUpDown14.Maximum = ToDecimal( Cap.C2 ) + cd.MstlvlGeo;
             numericUpDown14.Value = cd.SkillHandbell;
         }
+
+        private static decimal GetMax( params byte[] mlv ) => (decimal)mlv.Max();
 
         private void Button1_Click( object sender, EventArgs e )
         {

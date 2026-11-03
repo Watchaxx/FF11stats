@@ -467,6 +467,9 @@ namespace FF11stats
             case "toolStripMenuItem231":
                 ShowForm( new FormJobSpecificEq() );
                 break;
+            case "toolStripMenuItem232":
+                ShowForm( new FormStorageSearch() );
+                break;
             //魔法
             case "toolStripMenuItem67":
                 ShowForm( new FormMagicWhite() );

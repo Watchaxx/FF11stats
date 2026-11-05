@@ -12,9 +12,11 @@
         public int Mentor { get; set; } = 0;
         public int Gladiators { get; set; } = 0;
         public int Mercenary { get; set; } = 0;
+        public decimal[] AutomatonSkill { get; set; } = [0m, 0m, 0m];
         public int Campaign { get; set; } = 0;
         public int CoalitionEvaluation { get; set; } = 0;
         public int Unity { get; set; } = 0;
+        public sbyte WingSkill { get; set; } = 0;
         #endregion
         #region ジョブレベル
         public byte JoblvlWar { get; set; } = 1;

@@ -29,6 +29,9 @@ namespace FF11stats
             comboBox5.SelectedIndex = cd.Mentor;
             comboBox6.SelectedIndex = cd.Gladiators;
             comboBox15.SelectedIndex = cd.Mercenary;
+            numericUpDown3.Value = cd.AutomatonSkill[0] + cd.MstlvlPup;
+            numericUpDown4.Value = cd.AutomatonSkill[1] + cd.MstlvlPup;
+            numericUpDown5.Value = cd.AutomatonSkill[2] + cd.MstlvlPup;
             comboBox4.SelectedIndex = cd.Campaign & 0x03;
             comboBox8.SelectedIndex = ( cd.Campaign & 0xFC ) >>> 2;
             comboBox9.SelectedIndex = cd.CoalitionEvaluation & 0x0000_000F;
@@ -38,6 +41,7 @@ namespace FF11stats
             comboBox13.SelectedIndex = ( cd.CoalitionEvaluation & 0x000F_0000 ) >>> 16;
             comboBox14.SelectedIndex = ( cd.CoalitionEvaluation & 0x00F0_0000 ) >>> 20;
             comboBox7.SelectedIndex = cd.Unity;
+            numericUpDown6.Value = cd.WingSkill;
             tableLayoutPanel1.ResumeLayout();
         }
 

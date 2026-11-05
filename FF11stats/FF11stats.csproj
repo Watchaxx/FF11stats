@@ -9,11 +9,12 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyTitle>FF11stats</AssemblyTitle>
     <Company>(C) SQUARE ENIX</Company>
-    <FileVersion>5.5.8.37</FileVersion>
-    <InformationalVersion>5.5.8</InformationalVersion>
+    <FileVersion>5.6.0.38</FileVersion>
+    <InformationalVersion>5.6.0</InformationalVersion>
     <Product>FF11stats</Product>
     <Copyright>(C) 2015-2026 わっちゃ</Copyright>
     <Description>■更新履歴
+5.6.0 [add] ステータスにオートマトンと羽術スキルを追加
 5.5.8 [add] 装備/アイテム検索
   [fix] ステータス/戦闘スキルと魔法スキルの最大値
 5.5.7 [add] 装備/イベントアイテム保管

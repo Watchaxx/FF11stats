@@ -69,21 +69,37 @@
             comboBox15 = new ComboBox();
             button1 = new Button();
             button2 = new Button();
+            label19 = new Label();
+            label20 = new Label();
+            numericUpDown3 = new NumericUpDown();
+            label21 = new Label();
+            numericUpDown4 = new NumericUpDown();
+            label22 = new Label();
+            numericUpDown5 = new NumericUpDown();
+            label23 = new Label();
+            numericUpDown6 = new NumericUpDown();
             tableLayoutPanel1.SuspendLayout();
             ( (System.ComponentModel.ISupportInitialize)numericUpDown1 ).BeginInit();
             ( (System.ComponentModel.ISupportInitialize)numericUpDown2 ).BeginInit();
             ( (System.ComponentModel.ISupportInitialize)pictureBox1 ).BeginInit();
             ( (System.ComponentModel.ISupportInitialize)pictureBox2 ).BeginInit();
             ( (System.ComponentModel.ISupportInitialize)pictureBox3 ).BeginInit();
+            ( (System.ComponentModel.ISupportInitialize)numericUpDown3 ).BeginInit();
+            ( (System.ComponentModel.ISupportInitialize)numericUpDown4 ).BeginInit();
+            ( (System.ComponentModel.ISupportInitialize)numericUpDown5 ).BeginInit();
+            ( (System.ComponentModel.ISupportInitialize)numericUpDown6 ).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.Anchor =    AnchorStyles.Top  |  AnchorStyles.Bottom   |  AnchorStyles.Left   |  AnchorStyles.Right ;
             tableLayoutPanel1.AutoScroll = true;
-            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnCount = 5;
             tableLayoutPanel1.ColumnStyles.Add( new ColumnStyle() );
             tableLayoutPanel1.ColumnStyles.Add( new ColumnStyle() );
-            tableLayoutPanel1.ColumnStyles.Add( new ColumnStyle( SizeType.Absolute, 20F ) );
+            tableLayoutPanel1.ColumnStyles.Add( new ColumnStyle() );
+            tableLayoutPanel1.ColumnStyles.Add( new ColumnStyle() );
+            tableLayoutPanel1.ColumnStyles.Add( new ColumnStyle() );
             tableLayoutPanel1.Controls.Add( label1, 0, 0 );
             tableLayoutPanel1.Controls.Add( textBox1, 1, 0 );
             tableLayoutPanel1.Controls.Add( label2, 0, 1 );
@@ -94,40 +110,47 @@
             tableLayoutPanel1.Controls.Add( comboBox3, 1, 3 );
             tableLayoutPanel1.Controls.Add( label5, 0, 4 );
             tableLayoutPanel1.Controls.Add( numericUpDown1, 1, 4 );
-            tableLayoutPanel1.Controls.Add( label6, 0, 9 );
-            tableLayoutPanel1.Controls.Add( comboBox4, 1, 9 );
+            tableLayoutPanel1.Controls.Add( label6, 0, 13 );
+            tableLayoutPanel1.Controls.Add( comboBox4, 1, 13 );
             tableLayoutPanel1.Controls.Add( label7, 0, 5 );
             tableLayoutPanel1.Controls.Add( numericUpDown2, 1, 5 );
             tableLayoutPanel1.Controls.Add( label8, 0, 6 );
             tableLayoutPanel1.Controls.Add( comboBox5, 1, 6 );
             tableLayoutPanel1.Controls.Add( label9, 0, 7 );
             tableLayoutPanel1.Controls.Add( comboBox6, 1, 7 );
-            tableLayoutPanel1.Controls.Add( label10, 0, 17 );
-            tableLayoutPanel1.Controls.Add( comboBox7, 1, 17 );
-            tableLayoutPanel1.Controls.Add( label11, 0, 10 );
-            tableLayoutPanel1.Controls.Add( comboBox8, 1, 10 );
-            tableLayoutPanel1.Controls.Add( label12, 0, 11 );
-            tableLayoutPanel1.Controls.Add( comboBox9, 1, 11 );
-            tableLayoutPanel1.Controls.Add( label13, 0, 12 );
-            tableLayoutPanel1.Controls.Add( comboBox10, 1, 12 );
-            tableLayoutPanel1.Controls.Add( label14, 0, 13 );
-            tableLayoutPanel1.Controls.Add( comboBox11, 1, 13 );
-            tableLayoutPanel1.Controls.Add( label15, 0, 14 );
-            tableLayoutPanel1.Controls.Add( comboBox12, 1, 14 );
-            tableLayoutPanel1.Controls.Add( label16, 0, 15 );
-            tableLayoutPanel1.Controls.Add( comboBox13, 1, 15 );
-            tableLayoutPanel1.Controls.Add( label17, 0, 16 );
-            tableLayoutPanel1.Controls.Add( comboBox14, 1, 16 );
+            tableLayoutPanel1.Controls.Add( label10, 3, 6 );
+            tableLayoutPanel1.Controls.Add( comboBox7, 4, 6 );
+            tableLayoutPanel1.Controls.Add( label11, 0, 14 );
+            tableLayoutPanel1.Controls.Add( comboBox8, 1, 14 );
+            tableLayoutPanel1.Controls.Add( label12, 3, 0 );
+            tableLayoutPanel1.Controls.Add( comboBox9, 4, 0 );
+            tableLayoutPanel1.Controls.Add( label13, 3, 1 );
+            tableLayoutPanel1.Controls.Add( comboBox10, 4, 1 );
+            tableLayoutPanel1.Controls.Add( label14, 3, 2 );
+            tableLayoutPanel1.Controls.Add( comboBox11, 4, 2 );
+            tableLayoutPanel1.Controls.Add( label15, 3, 3 );
+            tableLayoutPanel1.Controls.Add( comboBox12, 4, 3 );
+            tableLayoutPanel1.Controls.Add( label16, 3, 4 );
+            tableLayoutPanel1.Controls.Add( comboBox13, 4, 4 );
+            tableLayoutPanel1.Controls.Add( label17, 3, 5 );
+            tableLayoutPanel1.Controls.Add( comboBox14, 4, 5 );
             tableLayoutPanel1.Controls.Add( pictureBox1, 2, 1 );
             tableLayoutPanel1.Controls.Add( pictureBox2, 2, 3 );
-            tableLayoutPanel1.Controls.Add( pictureBox3, 2, 9 );
+            tableLayoutPanel1.Controls.Add( pictureBox3, 2, 13 );
             tableLayoutPanel1.Controls.Add( label18, 0, 8 );
             tableLayoutPanel1.Controls.Add( comboBox15, 1, 8 );
+            tableLayoutPanel1.Controls.Add( label19, 0, 9 );
+            tableLayoutPanel1.Controls.Add( label20, 0, 10 );
+            tableLayoutPanel1.Controls.Add( label21, 0, 11 );
+            tableLayoutPanel1.Controls.Add( label22, 0, 12 );
+            tableLayoutPanel1.Controls.Add( numericUpDown5, 1, 12 );
+            tableLayoutPanel1.Controls.Add( numericUpDown4, 1, 11 );
+            tableLayoutPanel1.Controls.Add( numericUpDown3, 1, 10 );
+            tableLayoutPanel1.Controls.Add( label23, 3, 7 );
+            tableLayoutPanel1.Controls.Add( numericUpDown6, 4, 7 );
             tableLayoutPanel1.Location = new Point( 12, 12 );
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 18;
-            tableLayoutPanel1.RowStyles.Add( new RowStyle() );
-            tableLayoutPanel1.RowStyles.Add( new RowStyle() );
+            tableLayoutPanel1.RowCount = 16;
             tableLayoutPanel1.RowStyles.Add( new RowStyle() );
             tableLayoutPanel1.RowStyles.Add( new RowStyle() );
             tableLayoutPanel1.RowStyles.Add( new RowStyle() );
@@ -144,7 +167,8 @@
             tableLayoutPanel1.RowStyles.Add( new RowStyle() );
             tableLayoutPanel1.RowStyles.Add( new RowStyle() );
             tableLayoutPanel1.RowStyles.Add( new RowStyle( SizeType.Absolute, 20F ) );
-            tableLayoutPanel1.Size = new Size( 300, 525 );
+            tableLayoutPanel1.RowStyles.Add( new RowStyle( SizeType.Absolute, 20F ) );
+            tableLayoutPanel1.Size = new Size( 760, 508 );
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -245,10 +269,10 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point( 3, 261 );
+            label6.Location = new Point( 3, 363 );
             label6.Name = "label6";
             label6.Size = new Size( 53, 15 );
-            label6.TabIndex = 18;
+            label6.TabIndex = 25;
             label6.Text = "カンパニエ";
             // 
             // comboBox4
@@ -256,10 +280,10 @@
             comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange( new object[] { "-", "鉄羊騎士隊", "第四共和軍団", "コブラ傭兵団" } );
-            comboBox4.Location = new Point( 110, 264 );
+            comboBox4.Location = new Point( 110, 366 );
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size( 150, 23 );
-            comboBox4.TabIndex = 19;
+            comboBox4.TabIndex = 26;
             comboBox4.SelectedIndexChanged +=  ComboBox4_SelectedIndexChanged ;
             // 
             // label7
@@ -320,10 +344,10 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point( 3, 493 );
+            label10.Location = new Point( 303, 174 );
             label10.Name = "label10";
             label10.Size = new Size( 42, 15 );
-            label10.TabIndex = 34;
+            label10.TabIndex = 41;
             label10.Text = "ユニティ";
             // 
             // comboBox7
@@ -331,130 +355,130 @@
             comboBox7.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox7.FormattingEnabled = true;
             comboBox7.Items.AddRange( new object[] { "-", "ピエージェ", "アヤメ", "インビンシブルシールド", "アプルル", "マート", "アルド", "ジャコ・ワーコンダロ", "ナジャ・サラヒム", "フラヴィリア", "ヨランオラン", "シルヴィ" } );
-            comboBox7.Location = new Point( 110, 496 );
+            comboBox7.Location = new Point( 408, 177 );
             comboBox7.Name = "comboBox7";
             comboBox7.Size = new Size( 150, 23 );
-            comboBox7.TabIndex = 35;
+            comboBox7.TabIndex = 42;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point( 3, 290 );
+            label11.Location = new Point( 3, 392 );
             label11.Name = "label11";
             label11.Size = new Size( 31, 15 );
-            label11.TabIndex = 20;
+            label11.TabIndex = 27;
             label11.Text = "勲章";
             // 
             // comboBox8
             // 
             comboBox8.FormattingEnabled = true;
             comboBox8.Items.AddRange( new object[] { "-", "二級連合従軍章", "一級連合従軍章", "連合白兵章", "連合突撃章", "青銅剣勲章", "白銀剣勲章", "霊銀剣勲章", "黄金剣勲章", "二級戦功水晶章", "一級戦功水晶章", "騎士戦功水晶章", "聖騎士戦功水晶章", "二級勲功翼章", "一級勲功翼章", "名誉勲功翼章", "殊勲翼章", "暁星勲章", "暁月勲章", "暁光勲章", "暁女神勲章" } );
-            comboBox8.Location = new Point( 110, 293 );
+            comboBox8.Location = new Point( 110, 395 );
             comboBox8.Name = "comboBox8";
             comboBox8.Size = new Size( 150, 23 );
-            comboBox8.TabIndex = 21;
+            comboBox8.TabIndex = 28;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point( 3, 319 );
+            label12.Location = new Point( 303, 0 );
             label12.Name = "label12";
             label12.Size = new Size( 88, 15 );
-            label12.TabIndex = 22;
+            label12.TabIndex = 29;
             label12.Text = "PIO.ワークス評価";
             // 
             // comboBox9
             // 
             comboBox9.FormattingEnabled = true;
-            comboBox9.Location = new Point( 110, 322 );
+            comboBox9.Location = new Point( 408, 3 );
             comboBox9.Name = "comboBox9";
             comboBox9.Size = new Size( 150, 23 );
-            comboBox9.TabIndex = 23;
+            comboBox9.TabIndex = 30;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point( 3, 348 );
+            label13.Location = new Point( 303, 29 );
             label13.Name = "label13";
             label13.Size = new Size( 90, 15 );
-            label13.TabIndex = 24;
+            label13.TabIndex = 31;
             label13.Text = "PCK.ワークス評価";
             // 
             // comboBox10
             // 
             comboBox10.FormattingEnabled = true;
-            comboBox10.Location = new Point( 110, 351 );
+            comboBox10.Location = new Point( 408, 32 );
             comboBox10.Name = "comboBox10";
             comboBox10.Size = new Size( 150, 23 );
-            comboBox10.TabIndex = 25;
+            comboBox10.TabIndex = 32;
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point( 3, 377 );
+            label14.Location = new Point( 303, 58 );
             label14.Name = "label14";
             label14.Size = new Size( 93, 15 );
-            label14.TabIndex = 26;
+            label14.TabIndex = 33;
             label14.Text = "COU.ワークス評価";
             // 
             // comboBox11
             // 
             comboBox11.FormattingEnabled = true;
-            comboBox11.Location = new Point( 110, 380 );
+            comboBox11.Location = new Point( 408, 61 );
             comboBox11.Name = "comboBox11";
             comboBox11.Size = new Size( 150, 23 );
-            comboBox11.TabIndex = 27;
+            comboBox11.TabIndex = 34;
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point( 3, 406 );
+            label15.Location = new Point( 303, 87 );
             label15.Name = "label15";
             label15.Size = new Size( 87, 15 );
-            label15.TabIndex = 28;
+            label15.TabIndex = 35;
             label15.Text = "SCT.ワークス評価";
             // 
             // comboBox12
             // 
             comboBox12.FormattingEnabled = true;
-            comboBox12.Location = new Point( 110, 409 );
+            comboBox12.Location = new Point( 408, 90 );
             comboBox12.Name = "comboBox12";
             comboBox12.Size = new Size( 150, 23 );
-            comboBox12.TabIndex = 29;
+            comboBox12.TabIndex = 36;
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point( 3, 435 );
+            label16.Location = new Point( 303, 116 );
             label16.Name = "label16";
             label16.Size = new Size( 87, 15 );
-            label16.TabIndex = 30;
+            label16.TabIndex = 37;
             label16.Text = "INV.ワークス評価";
             // 
             // comboBox13
             // 
             comboBox13.FormattingEnabled = true;
-            comboBox13.Location = new Point( 110, 438 );
+            comboBox13.Location = new Point( 408, 119 );
             comboBox13.Name = "comboBox13";
             comboBox13.Size = new Size( 150, 23 );
-            comboBox13.TabIndex = 31;
+            comboBox13.TabIndex = 38;
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point( 3, 464 );
+            label17.Location = new Point( 303, 145 );
             label17.Name = "label17";
             label17.Size = new Size( 99, 15 );
-            label17.TabIndex = 32;
+            label17.TabIndex = 39;
             label17.Text = "MUM.ワークス評価";
             // 
             // comboBox14
             // 
             comboBox14.FormattingEnabled = true;
-            comboBox14.Location = new Point( 110, 467 );
+            comboBox14.Location = new Point( 408, 148 );
             comboBox14.Name = "comboBox14";
             comboBox14.Size = new Size( 150, 23 );
-            comboBox14.TabIndex = 33;
+            comboBox14.TabIndex = 40;
             // 
             // pictureBox1
             // 
@@ -479,7 +503,7 @@
             // pictureBox3
             // 
             pictureBox3.Anchor = AnchorStyles.Left;
-            pictureBox3.Location = new Point( 266, 274 );
+            pictureBox3.Location = new Point( 266, 376 );
             pictureBox3.Name = "pictureBox3";
             tableLayoutPanel1.SetRowSpan( pictureBox3, 2 );
             pictureBox3.Size = new Size( 31, 32 );
@@ -527,6 +551,88 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click +=  Button2_Click ;
             // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point( 3, 261 );
+            label19.Name = "label19";
+            label19.Size = new Size( 58, 15 );
+            label19.TabIndex = 18;
+            label19.Text = "オートマトン";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point( 3, 276 );
+            label20.Name = "label20";
+            label20.Size = new Size( 77, 15 );
+            label20.TabIndex = 19;
+            label20.Text = "・白兵戦スキル";
+            // 
+            // numericUpDown3
+            // 
+            numericUpDown3.DecimalPlaces = 1;
+            numericUpDown3.Increment = new decimal( new int[] { 1, 0, 0, 65536 } );
+            numericUpDown3.Location = new Point( 110, 279 );
+            numericUpDown3.Maximum = new decimal( new int[] { 424, 0, 0, 0 } );
+            numericUpDown3.Name = "numericUpDown3";
+            numericUpDown3.Size = new Size( 150, 23 );
+            numericUpDown3.TabIndex = 20;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point( 3, 305 );
+            label21.Name = "label21";
+            label21.Size = new Size( 77, 15 );
+            label21.TabIndex = 21;
+            label21.Text = "・射撃戦スキル";
+            // 
+            // numericUpDown4
+            // 
+            numericUpDown4.DecimalPlaces = 1;
+            numericUpDown4.Increment = new decimal( new int[] { 1, 0, 0, 65536 } );
+            numericUpDown4.Location = new Point( 110, 308 );
+            numericUpDown4.Maximum = new decimal( new int[] { 424, 0, 0, 0 } );
+            numericUpDown4.Name = "numericUpDown4";
+            numericUpDown4.Size = new Size( 150, 23 );
+            numericUpDown4.TabIndex = 22;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point( 3, 334 );
+            label22.Name = "label22";
+            label22.Size = new Size( 77, 15 );
+            label22.TabIndex = 23;
+            label22.Text = "・魔法戦スキル";
+            // 
+            // numericUpDown5
+            // 
+            numericUpDown5.DecimalPlaces = 1;
+            numericUpDown5.Increment = new decimal( new int[] { 1, 0, 0, 65536 } );
+            numericUpDown5.Location = new Point( 110, 337 );
+            numericUpDown5.Maximum = new decimal( new int[] { 424, 0, 0, 0 } );
+            numericUpDown5.Name = "numericUpDown5";
+            numericUpDown5.Size = new Size( 150, 23 );
+            numericUpDown5.TabIndex = 24;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point( 303, 203 );
+            label23.Name = "label23";
+            label23.Size = new Size( 59, 15 );
+            label23.TabIndex = 43;
+            label23.Text = "羽術スキル";
+            // 
+            // numericUpDown6
+            // 
+            numericUpDown6.Location = new Point( 408, 206 );
+            numericUpDown6.Name = "numericUpDown6";
+            numericUpDown6.Size = new Size( 150, 23 );
+            numericUpDown6.TabIndex = 44;
+            // 
             // FormProfile
             // 
             AcceptButton = button1;
@@ -548,6 +654,10 @@
             ( (System.ComponentModel.ISupportInitialize)pictureBox1 ).EndInit();
             ( (System.ComponentModel.ISupportInitialize)pictureBox2 ).EndInit();
             ( (System.ComponentModel.ISupportInitialize)pictureBox3 ).EndInit();
+            ( (System.ComponentModel.ISupportInitialize)numericUpDown3 ).EndInit();
+            ( (System.ComponentModel.ISupportInitialize)numericUpDown4 ).EndInit();
+            ( (System.ComponentModel.ISupportInitialize)numericUpDown5 ).EndInit();
+            ( (System.ComponentModel.ISupportInitialize)numericUpDown6 ).EndInit();
             ResumeLayout( false );
         }
 
@@ -595,5 +705,14 @@
         private PictureBox pictureBox3;
         private Label label18;
         private ComboBox comboBox15;
+        private Label label19;
+        private Label label20;
+        private NumericUpDown numericUpDown3;
+        private Label label21;
+        private NumericUpDown numericUpDown4;
+        private Label label22;
+        private NumericUpDown numericUpDown5;
+        private Label label23;
+        private NumericUpDown numericUpDown6;
     }
 }

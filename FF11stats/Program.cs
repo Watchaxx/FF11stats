@@ -527,6 +527,7 @@
             c += cd.EmiAchievementsFame.Count( x => x != 0 );
             c += cd.EmiUnityWanted.Count( x => x != 0 );
             c += cd.EmiVanaversary15.Count( x => x != 0 );
+            c += cd.EmiFaithAscension.Count( x => x != 0 );
             c += cd.EmiOtherRoeQuests1.Count( x => x != 0 );
             c += cd.EmiOtherRoeQuests2.Count( x => x != 0 );
             c += cd.EmiOtherRoeQuests3.Count( x => x != 0 );

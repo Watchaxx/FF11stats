@@ -169,6 +169,10 @@ namespace FF11stats
                 Text = $"{mogSlip}【33】";
                 textBox1.ImeMode = ImeMode.Off;
                 break;
+            case "toolStripMenuItem233":
+                rd = new( ds.Celestite );
+                Text = "セレスタイト";
+                break;
             default:
                 throw new InvalidOperationException( "フォームの初期化エラー" );
             }

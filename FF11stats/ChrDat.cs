@@ -286,6 +286,7 @@
         public sbyte[] EmiAchievementsFame { get; set; } = new sbyte[14];
         public sbyte[] EmiUnityWanted { get; set; } = new sbyte[56];
         public sbyte[] EmiVanaversary15 { get; set; } = new sbyte[5];
+        public sbyte[] EmiFaithAscension { get; set; } = new sbyte[5];
         public sbyte[] EmiOtherRoeQuests1 { get; set; } = new sbyte[15];
         public sbyte[] EmiOtherRoeQuests2 { get; set; } = new sbyte[7];
         public sbyte[] EmiOtherRoeQuests3 { get; set; } = new sbyte[8];

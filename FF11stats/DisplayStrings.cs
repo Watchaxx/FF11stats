@@ -402,11 +402,14 @@ namespace FF11stats
         const string lv50 = "レベル50";
         const string lv75 = "レベル75";
         const string lv99 = "レベル99";
+        const string Ascension = "フェイスアセンド枠";
 
         #region フェイスポイント
         internal string[] FaithPtHpMp { get; } = ["HP上限", "MP上限"];
         internal string[] FaithPtStatus { get; } = ["STR", "DEX", "VIT", "AGI", "INT", "MND", "CHR"];
         internal string[] FaithPtSkill { get; } = ["戦闘スキル", "魔法スキル"];
+        internal Itm Celestite { get; } = new( 6 ) {
+            { 30720, "命中のセレスタイト" }, { 30721, "回避のセレスタイト" }, { 30722, "攻撃のセレスタイト" }, { 30723, "防御のセレスタイト" }, { 30724, "魔攻のセレスタイト" }, { 30725, "魔防のセレスタイト" } };
         #endregion
         #region クエスト
         internal Dic QuestBs { get; } = new( 100 ) { { 0, "セイレーンの涙" }, { 1, "ガルカと少女" }, { 2, "ようこそバストゥークへ" }, { 3, "待ち人来たらず" }, { 4, "クゥダフの呪い" },
@@ -816,6 +819,9 @@ namespace FF11stats
         #endregion
         #region アニバーサリー
         internal Dic EmiVanaversary15 { get; } = new( 5 ) { { 0, "ミスリルマラソン" }, { 1, "セルビナ派" }, { 2, "パピ取り" }, { 3, "ミラテテ01" }, { 4, "ハイ、チーズ" } };
+        #endregion
+        #region フェイスアセンド枠
+        internal Dic EmiFaithAscension { get; } = new( 5 ) { { 0, $"{Ascension}拡張1" }, { 1, $"{Ascension}拡張2" }, { 2, $"{Ascension}#1Lv2" }, { 3, $"{Ascension}#1Lv3" }, { 4, $"{Ascension}#2Lv2" } };
         #endregion
         #region その他
         internal Dic EmiOtherRoeQuests1 { get; } = new( 15 ) { { 0, "テレポイント巡り" }, { 1, "闇狩り" }, { 2, "思い出の地に花びらを" }, { 3, "不倶戴天" }, { 4, "忘己利他" },

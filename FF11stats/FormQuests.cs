@@ -352,6 +352,11 @@ namespace FF11stats
                 rd = new( ds.EmiOtherRoeQuests3 );
                 Text = $"目標/その他/{menu.Text}";
                 break;
+            case "toolStripMenuItem235":
+                dat = cd.EmiFaithAscension;
+                rd = new( ds.EmiFaithAscension );
+                Text = "目標/フェイスアセンド枠";
+                break;
             }
             num = Math.Max( dat.Length, rd.Count );
             Array.Resize( ref c, rd.Count );
@@ -590,6 +595,9 @@ namespace FF11stats
                     break;
                 case "toolStripMenuItem161":
                     cd.EmiVanaversary15 = l.ToArray();
+                    break;
+                case "toolStripMenuItem235":
+                    cd.EmiFaithAscension = l.ToArray();
                     break;
                 case "toolStripMenuItem162":
                     cd.EmiOtherRoeQuests1 = l.ToArray();

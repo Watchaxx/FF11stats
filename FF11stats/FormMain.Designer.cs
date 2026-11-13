@@ -120,6 +120,7 @@
             toolStripMenuItem191 = new ToolStripMenuItem();
             toolStripMenuItem192 = new ToolStripMenuItem();
             toolStripMenuItem193 = new ToolStripMenuItem();
+            toolStripMenuItem233 = new ToolStripMenuItem();
             contextMenuStrip2 = new ContextMenuStrip( components );
             contextMenuStrip3 = new ContextMenuStrip( components );
             contextMenuStrip4 = new ContextMenuStrip( components );
@@ -222,6 +223,8 @@
             toolStripMenuItem160 = new ToolStripMenuItem();
             toolStripMenuItem99 = new ToolStripMenuItem();
             toolStripMenuItem161 = new ToolStripMenuItem();
+            toolStripMenuItem234 = new ToolStripMenuItem();
+            toolStripMenuItem235 = new ToolStripMenuItem();
             toolStripMenuItem100 = new ToolStripMenuItem();
             toolStripMenuItem162 = new ToolStripMenuItem();
             toolStripMenuItem163 = new ToolStripMenuItem();
@@ -537,9 +540,9 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange( new ToolStripItem[] { toolStripMenuItem11, toolStripMenuItem12, toolStripMenuItem13, toolStripMenuItem14, toolStripMenuItem15, toolStripMenuItem16, toolStripMenuItem177, toolStripMenuItem178, toolStripMenuItem190 } );
+            contextMenuStrip1.Items.AddRange( new ToolStripItem[] { toolStripMenuItem11, toolStripMenuItem12, toolStripMenuItem13, toolStripMenuItem14, toolStripMenuItem15, toolStripMenuItem16, toolStripMenuItem177, toolStripMenuItem178, toolStripMenuItem190, toolStripMenuItem233 } );
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size( 158, 202 );
+            contextMenuStrip1.Size = new Size( 158, 224 );
             // 
             // toolStripMenuItem11
             // 
@@ -593,201 +596,201 @@
             // toolStripMenuItem17
             // 
             toolStripMenuItem17.Name = "toolStripMenuItem17";
-            toolStripMenuItem17.Size = new Size( 180, 22 );
+            toolStripMenuItem17.Size = new Size( 156, 22 );
             toolStripMenuItem17.Text = "&HP/MP";
             toolStripMenuItem17.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem18
             // 
             toolStripMenuItem18.Name = "toolStripMenuItem18";
-            toolStripMenuItem18.Size = new Size( 180, 22 );
+            toolStripMenuItem18.Size = new Size( 156, 22 );
             toolStripMenuItem18.Text = "ステータス(&S)";
             toolStripMenuItem18.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem19
             // 
             toolStripMenuItem19.Name = "toolStripMenuItem19";
-            toolStripMenuItem19.Size = new Size( 180, 22 );
+            toolStripMenuItem19.Size = new Size( 156, 22 );
             toolStripMenuItem19.Text = "戦闘スキル(&C)";
             toolStripMenuItem19.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem20
             // 
             toolStripMenuItem20.Name = "toolStripMenuItem20";
-            toolStripMenuItem20.Size = new Size( 180, 22 );
+            toolStripMenuItem20.Size = new Size( 156, 22 );
             toolStripMenuItem20.Text = "魔法スキル(&M)";
             toolStripMenuItem20.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem21
             // 
             toolStripMenuItem21.Name = "toolStripMenuItem21";
-            toolStripMenuItem21.Size = new Size( 180, 22 );
+            toolStripMenuItem21.Size = new Size( 156, 22 );
             toolStripMenuItem21.Text = "その他(&O)";
             toolStripMenuItem21.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem22
             // 
             toolStripMenuItem22.Name = "toolStripMenuItem22";
-            toolStripMenuItem22.Size = new Size( 180, 22 );
+            toolStripMenuItem22.Size = new Size( 156, 22 );
             toolStripMenuItem22.Text = "ウェポンスキル(&W)";
             toolStripMenuItem22.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size( 177, 6 );
+            toolStripSeparator3.Size = new Size( 153, 6 );
             // 
             // toolStripMenuItem23
             // 
             toolStripMenuItem23.Name = "toolStripMenuItem23";
-            toolStripMenuItem23.Size = new Size( 180, 22 );
+            toolStripMenuItem23.Size = new Size( 156, 22 );
             toolStripMenuItem23.Text = "戦士(&W)";
             toolStripMenuItem23.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem24
             // 
             toolStripMenuItem24.Name = "toolStripMenuItem24";
-            toolStripMenuItem24.Size = new Size( 180, 22 );
+            toolStripMenuItem24.Size = new Size( 156, 22 );
             toolStripMenuItem24.Text = "モンク(&M)";
             toolStripMenuItem24.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem25
             // 
             toolStripMenuItem25.Name = "toolStripMenuItem25";
-            toolStripMenuItem25.Size = new Size( 180, 22 );
+            toolStripMenuItem25.Size = new Size( 156, 22 );
             toolStripMenuItem25.Text = "白魔道士(&W)";
             toolStripMenuItem25.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem26
             // 
             toolStripMenuItem26.Name = "toolStripMenuItem26";
-            toolStripMenuItem26.Size = new Size( 180, 22 );
+            toolStripMenuItem26.Size = new Size( 156, 22 );
             toolStripMenuItem26.Text = "黒魔道士(&B)";
             toolStripMenuItem26.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem27
             // 
             toolStripMenuItem27.Name = "toolStripMenuItem27";
-            toolStripMenuItem27.Size = new Size( 180, 22 );
+            toolStripMenuItem27.Size = new Size( 156, 22 );
             toolStripMenuItem27.Text = "赤魔道士(&R)";
             toolStripMenuItem27.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem28
             // 
             toolStripMenuItem28.Name = "toolStripMenuItem28";
-            toolStripMenuItem28.Size = new Size( 180, 22 );
+            toolStripMenuItem28.Size = new Size( 156, 22 );
             toolStripMenuItem28.Text = "シーフ(&T)";
             toolStripMenuItem28.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem29
             // 
             toolStripMenuItem29.Name = "toolStripMenuItem29";
-            toolStripMenuItem29.Size = new Size( 180, 22 );
+            toolStripMenuItem29.Size = new Size( 156, 22 );
             toolStripMenuItem29.Text = "ナイト(&P)";
             toolStripMenuItem29.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem30
             // 
             toolStripMenuItem30.Name = "toolStripMenuItem30";
-            toolStripMenuItem30.Size = new Size( 180, 22 );
+            toolStripMenuItem30.Size = new Size( 156, 22 );
             toolStripMenuItem30.Text = "暗黒騎士(&D)";
             toolStripMenuItem30.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem31
             // 
             toolStripMenuItem31.Name = "toolStripMenuItem31";
-            toolStripMenuItem31.Size = new Size( 180, 22 );
+            toolStripMenuItem31.Size = new Size( 156, 22 );
             toolStripMenuItem31.Text = "獣使い(&B)";
             toolStripMenuItem31.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem32
             // 
             toolStripMenuItem32.Name = "toolStripMenuItem32";
-            toolStripMenuItem32.Size = new Size( 180, 22 );
+            toolStripMenuItem32.Size = new Size( 156, 22 );
             toolStripMenuItem32.Text = "吟遊詩人(&B)";
             toolStripMenuItem32.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem33
             // 
             toolStripMenuItem33.Name = "toolStripMenuItem33";
-            toolStripMenuItem33.Size = new Size( 180, 22 );
+            toolStripMenuItem33.Size = new Size( 156, 22 );
             toolStripMenuItem33.Text = "狩人(&R)";
             toolStripMenuItem33.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem34
             // 
             toolStripMenuItem34.Name = "toolStripMenuItem34";
-            toolStripMenuItem34.Size = new Size( 180, 22 );
+            toolStripMenuItem34.Size = new Size( 156, 22 );
             toolStripMenuItem34.Text = "侍(&S)";
             toolStripMenuItem34.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem35
             // 
             toolStripMenuItem35.Name = "toolStripMenuItem35";
-            toolStripMenuItem35.Size = new Size( 180, 22 );
+            toolStripMenuItem35.Size = new Size( 156, 22 );
             toolStripMenuItem35.Text = "忍者(&N)";
             toolStripMenuItem35.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem36
             // 
             toolStripMenuItem36.Name = "toolStripMenuItem36";
-            toolStripMenuItem36.Size = new Size( 180, 22 );
+            toolStripMenuItem36.Size = new Size( 156, 22 );
             toolStripMenuItem36.Text = "竜騎士(&D)";
             toolStripMenuItem36.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem37
             // 
             toolStripMenuItem37.Name = "toolStripMenuItem37";
-            toolStripMenuItem37.Size = new Size( 180, 22 );
+            toolStripMenuItem37.Size = new Size( 156, 22 );
             toolStripMenuItem37.Text = "召喚士(&S)";
             toolStripMenuItem37.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem38
             // 
             toolStripMenuItem38.Name = "toolStripMenuItem38";
-            toolStripMenuItem38.Size = new Size( 180, 22 );
+            toolStripMenuItem38.Size = new Size( 156, 22 );
             toolStripMenuItem38.Text = "青魔道士(&B)";
             toolStripMenuItem38.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem39
             // 
             toolStripMenuItem39.Name = "toolStripMenuItem39";
-            toolStripMenuItem39.Size = new Size( 180, 22 );
+            toolStripMenuItem39.Size = new Size( 156, 22 );
             toolStripMenuItem39.Text = "コルセア(&C)";
             toolStripMenuItem39.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem40
             // 
             toolStripMenuItem40.Name = "toolStripMenuItem40";
-            toolStripMenuItem40.Size = new Size( 180, 22 );
+            toolStripMenuItem40.Size = new Size( 156, 22 );
             toolStripMenuItem40.Text = "からくり士(&P)";
             toolStripMenuItem40.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem41
             // 
             toolStripMenuItem41.Name = "toolStripMenuItem41";
-            toolStripMenuItem41.Size = new Size( 180, 22 );
+            toolStripMenuItem41.Size = new Size( 156, 22 );
             toolStripMenuItem41.Text = "踊り子(&D)";
             toolStripMenuItem41.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem42
             // 
             toolStripMenuItem42.Name = "toolStripMenuItem42";
-            toolStripMenuItem42.Size = new Size( 180, 22 );
+            toolStripMenuItem42.Size = new Size( 156, 22 );
             toolStripMenuItem42.Text = "学者(&S)";
             toolStripMenuItem42.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem43
             // 
             toolStripMenuItem43.Name = "toolStripMenuItem43";
-            toolStripMenuItem43.Size = new Size( 180, 22 );
+            toolStripMenuItem43.Size = new Size( 156, 22 );
             toolStripMenuItem43.Text = "風水士(&G)";
             toolStripMenuItem43.Click +=  ToolStripMenuItem12_Click ;
             // 
             // toolStripMenuItem44
             // 
             toolStripMenuItem44.Name = "toolStripMenuItem44";
-            toolStripMenuItem44.Size = new Size( 180, 22 );
+            toolStripMenuItem44.Size = new Size( 156, 22 );
             toolStripMenuItem44.Text = "魔導剣士(&R)";
             toolStripMenuItem44.Click +=  ToolStripMenuItem12_Click ;
             // 
@@ -980,6 +983,13 @@
             toolStripMenuItem193.Text = "スキル(&K)";
             toolStripMenuItem193.Click +=  ToolStripMenuItem12_Click ;
             // 
+            // toolStripMenuItem233
+            // 
+            toolStripMenuItem233.Name = "toolStripMenuItem233";
+            toolStripMenuItem233.Size = new Size( 157, 22 );
+            toolStripMenuItem233.Text = "セレスタイト(&L)";
+            toolStripMenuItem233.Click +=  ToolStripMenuItem12_Click ;
+            // 
             // contextMenuStrip2
             // 
             contextMenuStrip2.Name = "contextMenuStrip2";
@@ -1171,9 +1181,9 @@
             // 
             // contextMenuStrip7
             // 
-            contextMenuStrip7.Items.AddRange( new ToolStripItem[] { toolStripMenuItem90, toolStripMenuItem91, toolStripMenuItem92, toolStripMenuItem93, toolStripMenuItem94, toolStripMenuItem95, toolStripMenuItem96, toolStripMenuItem97, toolStripMenuItem98, toolStripMenuItem99, toolStripMenuItem100, toolStripSeparator2, toolStripMenuItem165 } );
+            contextMenuStrip7.Items.AddRange( new ToolStripItem[] { toolStripMenuItem90, toolStripMenuItem91, toolStripMenuItem92, toolStripMenuItem93, toolStripMenuItem94, toolStripMenuItem95, toolStripMenuItem96, toolStripMenuItem97, toolStripMenuItem98, toolStripMenuItem99, toolStripMenuItem234, toolStripMenuItem100, toolStripSeparator2, toolStripMenuItem165 } );
             contextMenuStrip7.Name = "contextMenuStrip7";
-            contextMenuStrip7.Size = new Size( 166, 274 );
+            contextMenuStrip7.Size = new Size( 166, 296 );
             // 
             // toolStripMenuItem90
             // 
@@ -1686,6 +1696,20 @@
             toolStripMenuItem161.Text = "15周年01-05";
             toolStripMenuItem161.Click +=  ToolStripMenuItem12_Click ;
             // 
+            // toolStripMenuItem234
+            // 
+            toolStripMenuItem234.DropDownItems.AddRange( new ToolStripItem[] { toolStripMenuItem235 } );
+            toolStripMenuItem234.Name = "toolStripMenuItem234";
+            toolStripMenuItem234.Size = new Size( 165, 22 );
+            toolStripMenuItem234.Text = "フェイスアセンド(&D)";
+            // 
+            // toolStripMenuItem235
+            // 
+            toolStripMenuItem235.Name = "toolStripMenuItem235";
+            toolStripMenuItem235.Size = new Size( 155, 22 );
+            toolStripMenuItem235.Text = "フェイスアセンド枠";
+            toolStripMenuItem235.Click +=  ToolStripMenuItem12_Click ;
+            // 
             // toolStripMenuItem100
             // 
             toolStripMenuItem100.DropDownItems.AddRange( new ToolStripItem[] { toolStripMenuItem162, toolStripMenuItem163, toolStripMenuItem164 } );
@@ -2128,7 +2152,7 @@
             // toolStripMenuItem228
             // 
             toolStripMenuItem228.Name = "toolStripMenuItem228";
-            toolStripMenuItem228.Size = new Size( 180, 22 );
+            toolStripMenuItem228.Size = new Size( 98, 22 );
             toolStripMenuItem228.Text = "【3&1】";
             toolStripMenuItem228.ToolTipText = "イベント報酬装備4";
             toolStripMenuItem228.Click +=  ToolStripMenuItem12_Click ;
@@ -2136,7 +2160,7 @@
             // toolStripMenuItem229
             // 
             toolStripMenuItem229.Name = "toolStripMenuItem229";
-            toolStripMenuItem229.Size = new Size( 180, 22 );
+            toolStripMenuItem229.Size = new Size( 98, 22 );
             toolStripMenuItem229.Text = "【3&2】";
             toolStripMenuItem229.ToolTipText = "アーティファクトItemLevel:119+4";
             toolStripMenuItem229.Click +=  ToolStripMenuItem12_Click ;
@@ -2144,7 +2168,7 @@
             // toolStripMenuItem230
             // 
             toolStripMenuItem230.Name = "toolStripMenuItem230";
-            toolStripMenuItem230.Size = new Size( 180, 22 );
+            toolStripMenuItem230.Size = new Size( 98, 22 );
             toolStripMenuItem230.Text = "【3&3】";
             toolStripMenuItem230.ToolTipText = "レリックItemLevel:119+4";
             toolStripMenuItem230.Click +=  ToolStripMenuItem12_Click ;
@@ -2465,5 +2489,8 @@
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripMenuItem toolStripMenuItem231;
         private ToolStripMenuItem toolStripMenuItem232;
+        private ToolStripMenuItem toolStripMenuItem233;
+        private ToolStripMenuItem toolStripMenuItem234;
+        private ToolStripMenuItem toolStripMenuItem235;
     }
 }

@@ -427,6 +427,9 @@ namespace FF11stats
             case "toolStripMenuItem193":
                 ShowForm( new FormFaithPoints( i ) );
                 break;
+            case "toolStripMenuItem233":
+                ShowForm( new FormItems( i.Name ) );
+                break;
             //装備
             case "toolStripMenuItem185":
             case "toolStripMenuItem198":    //預01
@@ -612,6 +615,7 @@ namespace FF11stats
             case "toolStripMenuItem159":
             case "toolStripMenuItem160":
             case "toolStripMenuItem161":
+            case "toolStripMenuItem235":
             case "toolStripMenuItem162":
             case "toolStripMenuItem163":
             case "toolStripMenuItem164":
